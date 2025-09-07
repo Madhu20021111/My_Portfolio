@@ -1,0 +1,48 @@
+/* About.css */
+.about {
+  background-color: #420042;
+}
+.container h2 {
+  color: #fffaff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.about-text p {
+  color: #ffd1ff;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image .image-placeholder {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+}
