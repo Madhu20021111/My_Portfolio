@@ -1,10 +1,11 @@
 // components/Footer.js
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer-overlay"></div>
       <div className="container">
         <div className="footer-content">
           <div className="footer-text">
@@ -16,6 +17,9 @@ const Footer = () => {
             <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
             <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
           </div>
+        </div>
+        <div className="copyright">
+          <p>Designed & Built with ❤️ by Nirosha Madhumali</p>
         </div>
       </div>
     </footer>

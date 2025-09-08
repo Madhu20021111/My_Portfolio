@@ -1,4 +1,3 @@
-// components/About.js
 import React from 'react';
 import './About.css';
 
@@ -25,8 +24,13 @@ const About = () => {
             </p>
           </div>
           <div className="about-image">
-            <div className="image-placeholder">
-              <span>About Image</span>
+            <div className="image-container">
+              <div className="image-placeholder">
+                <span>Your Photo</span>
+              </div>
+              <div className="floating-element element-1"></div>
+              <div className="floating-element element-2"></div>
+              <div className="floating-element element-3"></div>
             </div>
           </div>
         </div>
