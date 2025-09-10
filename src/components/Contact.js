@@ -1,5 +1,6 @@
 // components/Contact.js
 import React, { useState } from 'react';
+import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa"; 
 import './Contact.css';
 
 const Contact = () => {
@@ -62,10 +63,17 @@ const Contact = () => {
               </div>
             </div>
 
+           
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="LinkedIn">LinkedIn</a>
-              <a href="#" className="social-link" aria-label="GitHub">GitHub</a>
-              <a href="#" className="social-link" aria-label="Facebook">Facebook</a>
+              <a href="#" className="social-link" aria-label="LinkedIn">
+                <FaLinkedin size={20} style={{ marginRight: "8px" }} /> LinkedIn
+              </a>
+              <a href="#" className="social-link" aria-label="GitHub">
+                <FaGithub size={20} style={{ marginRight: "8px" }} /> GitHub
+              </a>
+              <a href="#" className="social-link" aria-label="Facebook">
+                <FaFacebook size={20} style={{ marginRight: "8px" }} /> Facebook
+              </a>
             </div>
           </div>
 

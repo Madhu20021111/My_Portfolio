@@ -15,22 +15,22 @@ const Skills = () => {
         {
           name: "CSS3",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-          level: 85,
+          level: 95,
         },
         {
           name: "JavaScript",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-          level: 80,
+          level: 60,
         },
         {
           name: "React",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-          level: 75,
+          level: 60,
         },
         {
           name: "Bootstrap",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-          level: 70,
+          level: 50,
         },
       ],
     },
@@ -55,7 +55,7 @@ const Skills = () => {
         {
           name: "Java",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-          level: 60,
+          level: 75,
         },
       ],
     },
@@ -70,7 +70,7 @@ const Skills = () => {
         {
           name: "MySQL",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-          level: 65,
+          level: 85,
         },
         {
           name: "Git",
@@ -80,12 +80,12 @@ const Skills = () => {
         {
           name: "GitHub",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-          level: 75,
+          level: 85,
         },
         {
           name: "VS Code",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-          level: 85,
+          level: 90,
         },
       ],
     },

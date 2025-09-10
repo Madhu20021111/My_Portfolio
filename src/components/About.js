@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import AboutImage from '../images/about.jpg'; 
 
 const About = () => {
   return (
@@ -26,7 +27,7 @@ const About = () => {
           <div className="about-image">
             <div className="image-container">
               <div className="image-placeholder">
-                <span>Your Photo</span>
+                <img src={AboutImage} alt="Nirosha Madhumali" className="about-image" />
               </div>
               <div className="floating-element element-1"></div>
               <div className="floating-element element-2"></div>
