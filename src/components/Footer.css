@@ -90,4 +90,20 @@
     gap: 20px;
     text-align: center;
   }
+  .social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon {
+  font-size: 24px;
+  color: #ff80ff; /* matches your theme */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #fff; /* turn white on hover */
+  transform: scale(1.2);
+}
+
 }

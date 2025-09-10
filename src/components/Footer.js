@@ -1,5 +1,6 @@
 // components/Footer.js
 import React from "react";
+import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,15 +13,18 @@ const Footer = () => {
             <p>&copy; {new Date().getFullYear()} Nirosha Madhumali. All Rights Reserved.</p>
           </div>
           <div className="social-links">
-            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="GitHub"><i className="fab fa-github"></i></a>
-            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
+            <a href="www.linkedin.com/in/nirosha-madhumali-a2325b333" aria-label="LinkedIn">
+              <FaLinkedin className="footer-icon" />
+            </a>
+            <a href="https://github.com/Madhu20021111" aria-label="GitHub">
+              <FaGithub className="footer-icon" />
+            </a>
+            <a href="https://www.facebook.com/nirosha.madumali.7547" aria-label="Facebook">
+              <FaFacebook className="footer-icon" />
+            </a>
           </div>
         </div>
-        <div className="copyright">
-          <p>Designed & Built with ❤️ by Nirosha Madhumali</p>
-        </div>
+        
       </div>
     </footer>
   );

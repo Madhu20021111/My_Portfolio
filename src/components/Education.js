@@ -41,7 +41,7 @@ const Education = () => {
                   <p className="degree">Bachelor of Science in Computing</p>
                   <p className="duration">
                     <i className="fas fa-calendar-alt"></i>
-                    2021 - Present
+                    2024 - Present
                   </p>
                   <div className="description">
                     <p>
@@ -84,7 +84,7 @@ const Education = () => {
                   <p className="degree">Various Programming & Development Courses</p>
                   <p className="duration">
                     <i className="fas fa-calendar-alt"></i>
-                    2020 - Present
+                    2024 - Present
                   </p>
                   <div className="description">
                     <p>

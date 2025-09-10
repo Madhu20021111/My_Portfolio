@@ -9,7 +9,6 @@
   z-index: 1000;
 }
 
-
 .header .container {
   display: flex;
   justify-content: space-between;
@@ -17,13 +16,13 @@
   padding: 20px 15px;
 }
 
-
 .logo span {
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffd1ff;
 }
 
+/* Desktop nav */
 .nav ul {
   display: flex;
   list-style: none;
@@ -38,12 +37,15 @@
   color: #ffd1ff;
   font-weight: 500;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .nav a:hover {
   color: white;
 }
 
+/* Hamburger menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -55,37 +57,57 @@
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background-color: #333;
-  margin: 3px 0;
+  background-color: #ffd1ff;
+  margin: 4px 0;
   transition: all 0.3s ease;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
-  
+
   .nav {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path 0.4s ease;
+    background-color: #1f001f;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
-  
+
   .nav-open {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    max-height: 300px; /* enough to show all links */
   }
-  
+
   .nav ul {
     flex-direction: column;
-    padding: 20px;
+    padding: 15px;
   }
-  
+
   .nav li {
-    margin: 10px 0;
+    margin: 12px 0;
   }
+
+  .nav a {
+    font-size: 1rem;
+    color: #ffd1ff;
+  }
+}
+
+/* Icon styles */
+.nav-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+  color: #ff80ff;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover .nav-icon {
+  color: white;
 }

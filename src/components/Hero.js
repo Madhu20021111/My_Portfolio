@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import heroImage from '../images/hero.jpg'; 
+import heroImage from '../images/niro.png'; 
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>Hello, I'm <span className="highlight">Nirosha Madhumali</span></h1>
-            <p className="hero-me">Passionate about Frontend Web Development</p>
+            <p className="hero-me">Passionate about <span className='me'> Frontend Web Development</span></p>
             <p className="hero-subtitle">Undergraduate at Faculty of Computing</p>    
             <p className="hero-institution"> Sabaragamuwa University of Sri Lanka</p>
             <div className="hero-buttons">

@@ -82,6 +82,13 @@
   max-width: 600px;
 }
 
+.hero-me{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#ff80ff;
+  
+}
+
 .hero-text h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -106,6 +113,12 @@
   background: rgba(255, 128, 255, 0.3);
   z-index: -1;
   border-radius: 4px;
+}
+.hero-text p .me{
+  
+  color: #fff;
+  font-size: 1.4rem;
+  
 }
 
 .hero-subtitle {
@@ -383,7 +396,7 @@
     font-size: 1rem;
   }
   .hero-me {
-    font-size: 5rem;
+    font-size: 10rem;
     /* margin-bottom: 10px;
     color: #ffa8ff;
     font-weight: 500; */

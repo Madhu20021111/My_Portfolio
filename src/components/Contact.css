@@ -243,4 +243,29 @@
     flex-direction: column;
     gap: 40px;
   }
+  .social-link svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  color: #0d0a0d; /* same as your theme accent */
+  flex-shrink: 0; /* prevents shrinking in flex */
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between icon and text */
+}
+
+.social-link .icon {
+  font-size: 20px;
+  color: #ff80ff; /* matches your theme */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover .icon {
+  color: #fff; /* turn white on hover */
+}
+
+
+ 
 }
