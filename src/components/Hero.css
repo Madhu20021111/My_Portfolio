@@ -330,6 +330,11 @@
     text-align: center;
     gap: 60px;
   }
+
+
+  .hero-text p .hero-me{
+    font-size: 1.8rem;
+  }
   
   .hero-text {
     max-width: 100%;
@@ -344,6 +349,8 @@
     height: 320px;
   }
 }
+
+
 
 @media (max-width: 768px) {
   .hero {

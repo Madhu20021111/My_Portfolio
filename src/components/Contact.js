@@ -67,12 +67,14 @@ const Contact = () => {
       fontWeight: '700',
       position: 'relative'
     },
+    
     contactContent: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '60px',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '40px',
       alignItems: 'start'
     },
+
     contactInfo: {
       color: '#ffd1ff',
       padding: '30px',
