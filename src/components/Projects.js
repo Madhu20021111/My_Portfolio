@@ -6,6 +6,7 @@ import "./Projects.css";
 import project01 from "../images/Project01.png";
 import project02 from "../images/Project02.jpg";
 import project03 from "../images/Project03.png";
+import project04 from "../images/Project04.png";
 
 const Projects = () => {
   const projects = [
@@ -77,6 +78,38 @@ const Projects = () => {
       ],
       link: "https://github.com/Madhu20021111/Job_Tracker",
       image: project03,
+    },
+    {
+      title: "SmartToDo",
+      description: "Easy Go with your daily tasks",
+      technologies: [
+        {
+          name: "React",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        },
+        {
+          name: "CSS3",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        },
+        {
+          name: "JavaScript",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        },
+        {
+          name: "MongoDB",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        },
+        {
+          name: "Express.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        },
+        {
+          name: "Node.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        },
+      ],
+      link: "https://github.com/Madhu20021111/SmartToDo",
+      image: project04,
     },
   ];
 
