@@ -42,16 +42,12 @@ const Skills = () => {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
           level: 75,
         },
-        // {
-        //   name: "Express",
-        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-        //   level: 70,
-        // },
-        // {
-        //   name: "Python",
-        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-        //   level: 65,
-        // },
+        {
+          name: "Express",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+          level: 70,
+        },
+       
         {
           name: "Java",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
@@ -62,11 +58,11 @@ const Skills = () => {
     {
       title: "Database & Tools",
       skills: [
-        // {
-        //   name: "MongoDB",
-        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-        //   level: 70,
-        // },
+        {
+          name: "MongoDB",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+          level: 70,
+        },
         {
           name: "MySQL",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
