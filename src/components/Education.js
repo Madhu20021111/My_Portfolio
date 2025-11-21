@@ -81,7 +81,7 @@ const Education = () => {
                 </div>
                 <div className="education-details">
                   <h3>Online Courses & Certifications</h3>
-                  <p className="degree">Programming & Development Courses</p>
+                  <p className="degree">Programming & Development Courses</p>~
                   <p className="duration">
                     <i className="fas fa-calendar-alt"></i>
                     2024 - Present
