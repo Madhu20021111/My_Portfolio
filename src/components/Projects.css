@@ -1,6 +1,8 @@
 /* Projects.css */
 .projects {
-    background: linear-gradient(135deg, #570057 0%, #3a003a 100%);
+    /* background: linear-gradient(135deg, #570057 0%, #3a003a 100%); */
+    background: #000000;
+    color: #ffffff;
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -58,7 +60,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #ff6b6b;
+    background-color: #00d4ff;
     border-radius: 2px;
 }
 
@@ -69,23 +71,24 @@
 }
 
 .project-card {
-    background-color: (135deg, #570057 0%, #3a003a 100%);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    background-color: (135deg, #00d4ff 0%, #00d5ffb2 100%);
     opacity: 0;
-    /* background-color: #ffc7ff; */
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(166, 0, 166, 0.11),
-                0 1px 3px rgba(166, 0, 166, 0.08);
+    box-shadow: 0 4px 6px rgba(12, 141, 192, 0.774),
+                0 1px 3px rgba(12, 141, 192, 0.774);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .project-card:hover {
-    box-shadow: 0 14px 28px rgba(166, 0, 166, 0.25), 
-                0 10px 10px rgba(166, 0, 166, 0.22);
+    box-shadow: 0 14px 28px rgba(12, 141, 192, 0.774), 
+                0 10px 10px rgba(12, 141, 192, 0.774);
     transform: translateY(-8px);
 }
 
@@ -135,17 +138,17 @@
     text-align: center;
     margin: 0 20px 20px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #8a008a 0%, #6a006a 100%);
+    background: linear-gradient(135deg, #00d4ff 0%, #9d50bb 100%);
     color: white;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(138, 0, 138, 0.3);
+    box-shadow: 0 4px 10px rgba(12, 141, 192, 0.774);
 }
 
 .project-link:hover {
-    box-shadow: 0 8px 20px rgba(138, 0, 138, 0.4);
+    box-shadow: 0 8px 20px rgba(12, 141, 192, 0.774);
     transform: translateY(-2px);
 }
 

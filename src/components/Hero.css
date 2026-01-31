@@ -1,7 +1,10 @@
 /* Hero.css */
 .hero {
   padding: 120px 0 80px;
-  background: linear-gradient(135deg, #380038 0%, #2a002a 100%);
+  background: #000000;
+  /* background: linear-gradient(135deg, #380038 0%, #2a002a 100%); */
+  /* background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); */
+  color: #ffffff;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -22,7 +25,7 @@
 .floating-shapes {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 168, 255, 0.1);
+  background: rgba(0, 212, 255, 0.05);
   animation: float 15s infinite ease-in-out;
 }
 
@@ -85,20 +88,64 @@
 .hero-me{
   font-size: 1.5rem;
   font-weight: 600;
-  color:#ff80ff;
+  color:#ffffff;
+  display: flex;
+  flex-wrap: nowrap; 
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  white-space: nowrap;
   
 }
+.typing-text {
+  color: #00d4ff;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden; 
+  white-space: nowrap; 
+  border-right: 3px solid #00d4ff; 
+  width: 0;
+  animation: 
+    typing 3.5s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
 
-.hero-text h1 {
+.hero-text {
+  max-width: 800px;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 25ch; }
+}
+
+/* The blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00d4ff; }
+}
+
+@media (max-width: 768px) {
+  .hero-me {
+    font-size: 1.1rem;
+    flex-direction: column; 
+    text-align: center;
+  }
+  .typing-text {
+    font-size: 1.3rem;
+  }
+}
+
+.hero-text h1  {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.2;  
   font-weight: 700;
 }
 
 .hero-text h1 .highlight {
-  color: #ff80ff;
+  color: #00d4ff;
   position: relative;
   display: inline-block;
 }
@@ -110,41 +157,63 @@
   left: 0;
   width: 100%;
   height: 8px;
-  background: rgba(255, 128, 255, 0.3);
+  /* background: rgba(255, 128, 255, 0.3); */
   z-index: -1;
   border-radius: 4px;
 }
 .hero-text p .me{
   
-  color: #fff;
+  color: #ffffff;
   font-size: 1.4rem;
+  overflow: hidden; 
+  white-space: nowrap; 
+  border-right: 3px solid #00d4ff; /* The "typing" cursor */
+  width: 0;
+  animation: 
+    typing 3.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite;
   
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 5px;
-  color: #ffa8ff;
-  font-weight: 500;
+  color: #ffffff;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Cursor Blink: Makes the border-right flash like a terminal */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00d4ff; }
+}
+
+/* Ensure the parent container doesn't restrict the animation width */
+.hero-text {
+  max-width: 650px;
 }
 
 .hero-institution {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #d48ed4;
+  color: #ffffff;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .hero-buttons .btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 30px;
+  padding: 12px 28px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
@@ -152,6 +221,33 @@
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #9d50bb 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
+}
+.btn-outline {
+  background: transparent;
+  color: #000000;
+  border: 2px solid #00d4ff;
+}
+.btn-outline:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+/* Icon Animation */
+.btn i, .btn svg {
+  transition: transform 0.3s ease;
+}
+.btn:hover svg {
+  transform: translateY(2px); /* Slight bounce for the download icon */
 }
 
 .hero-buttons .btn span {
@@ -172,7 +268,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #8a008a 0%, #6a006a 100%);
+  background: linear-gradient(135deg, #00d4ff 50%, #ffffff 50%);
   z-index: 1;
   transition: transform 0.5s ease;
 }
@@ -182,12 +278,12 @@
 }
 
 .hero-buttons .btn-primary {
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(138, 0, 138, 0.3);
+  color: #000000;
+  box-shadow: 0 0 50px rgba(0, 213, 255, 0.512);
 }
 
 .hero-buttons .btn-primary:hover {
-  box-shadow: 0 15px 25px rgba(138, 0, 138, 0.4);
+  box-shadow: 0 0 50px rgba(0, 213, 255, 0.512);
   transform: translateY(-3px);
 }
 
@@ -208,8 +304,8 @@
 }
 
 .profile-image {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   object-fit: cover;
   position: relative;
@@ -223,7 +319,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
 }
 
@@ -233,7 +329,8 @@
   left: -15px;
   right: -15px;
   bottom: -15px;
-  border: 2px solid #ff80ff;
+  border: 2px solid #00d4ff;
+  box-shadow: 0 0 80px rgba(0, 213, 255, 0.512);
   border-radius: 50%;
   z-index: 2;
   animation: rotate-border 20s linear infinite;

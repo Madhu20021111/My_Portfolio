@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .skills {
-  background: linear-gradient(135deg, #520052 0%, #3a003a 100%);
+  /* background: linear-gradient(135deg, #520052 0%, #3a003a 100%); */
+  background: #000000;
+  color: #ffffff;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -31,6 +33,7 @@
   top: 10%;
   left: 5%;
   animation-delay: 0s;
+  background: rgba(0, 212, 255, 0.05);
 }
 
 .floating-shapes.shape-2 {
@@ -39,6 +42,7 @@
   top: 70%;
   left: 90%;
   animation-delay: 5s;
+  background: rgba(0, 212, 255, 0.05);
 }
 
 .floating-shapes.shape-3 {
@@ -47,6 +51,7 @@
   top: 40%;
   left: 85%;
   animation-delay: 10s;
+  background: rgba(0, 212, 255, 0.05);
 }
 
 @keyframes float {
@@ -91,13 +96,13 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: #ff6b6b;
+  background-color: #00d4ff;
   border-radius: 2px;
 }
 
 .section-subtitle {
   text-align: center;
-  color: #d48ed4;
+  color: #00d4ff;
   margin-bottom: 60px;
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
@@ -111,11 +116,11 @@
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
   border-radius: 15px;
   padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
@@ -123,11 +128,12 @@
 .skill-category:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 128, 255, 0.3);
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .category-title {
-  color: #ff80ff;
+  color: #ffffff;
   margin-bottom: 25px;
   font-size: 1.6rem;
   font-weight: 600;
@@ -140,7 +146,7 @@
 .title-icon {
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #8a008a 0%, #6a006a 100%);
+  background: linear-gradient(135deg, #00d5ffb3 0%, #00d4ff 100%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -154,7 +160,7 @@
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
-  background: #ff80ff;
+  background: #00d4ff;
   border-radius: 50%;
 }
 
@@ -187,7 +193,7 @@
 
 .skill-icon {
   font-size: 2rem;
-  color: #ff80ff;
+  color: #00d4ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +219,7 @@
 }
 
 .skill-percentage {
-  color: #ff80ff;
+  color: #00d4ff;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   background: rgba(255, 128, 255, 0.1);
@@ -233,7 +239,7 @@
 
 .skill-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #ff80ff, #ff6b6b);
+  background: linear-gradient(90deg, #00d4ff, #00d5ffc4);
   border-radius: 4px;
   position: relative;
   transition: width 1.5s ease-in-out;
@@ -253,7 +259,7 @@
   background: #fff;
   border-radius: 50%;
   transform: translate(50%, -25%);
-  box-shadow: 0 0 10px rgba(255, 128, 255, 0.5);
+  box-shadow: 0 0 10px rgba(19, 179, 238, 0.5);
 }
 
 /* Additional Skills */
@@ -266,7 +272,7 @@
 }
 
 .additional-title {
-  color: #ff80ff;
+  color: #00d4ff;
   text-align: center;
   margin-bottom: 25px;
   font-size: 1.5rem;
@@ -282,19 +288,20 @@
 }
 
 .skill-tag {
-  background: rgba(255, 128, 255, 0.1);
-  color: #ff80ff;
+  background: rgba(4, 83, 135, 0.307);
+  color: #ffffff;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 128, 255, 0.2);
+  border: 1px solid rgba(4, 83, 135, 0.307);
+  cursor: pointer;
 }
 
 .skill-tag:hover {
-  background: rgba(255, 128, 255, 0.2);
+  background: rgba(67, 144, 199, 0.401);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }

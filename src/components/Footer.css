@@ -1,11 +1,14 @@
 .footer {
-  background-color: #140014;
+  /* background-color: #140014; */
+  background-color: #000000;
+  background: #000000;
+  color: #ffffff;
   color: var(--white);
   padding: 50px 0 20px;
   position: relative;
   overflow: hidden;
-  border-top: 2px solid transparent;
-  border-image: linear-gradient(90deg, #ff80ff, #ff6b6b);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-image: linear-gradient(90deg, #00d4ff, #00d5ffd7);
   border-image-slice: 1;
 }
 
@@ -16,7 +19,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 128, 255, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(31, 150, 236, 0.029) 0%, transparent 70%);
   animation: moveOverlay 12s linear infinite;
   z-index: 0;
 }
@@ -56,9 +59,9 @@
 }
 
 .social-links a:hover {
-  background-color: var(--primary-color);
+  background-color: #00d4ff;
   transform: translateY(-5px) rotate(8deg);
-  box-shadow: 0 0 12px rgba(255, 128, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
 }
 
 .footer-text p {

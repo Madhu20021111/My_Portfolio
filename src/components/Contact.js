@@ -64,7 +64,8 @@ const Contact = () => {
 
   const styles = {
     contact: {
-      background: "linear-gradient(135deg, #5c005c 0%, #3a003a 100%)",
+      // background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)",
+      background: "#000000",
       padding: "100px 20px",
       minHeight: "100vh",
       fontFamily: "'Poppins', -apple-system, BlinkMacSystemFont, sans-serif",
@@ -77,12 +78,23 @@ const Contact = () => {
     },
     sectionTitle: {
       textAlign: "center",
-      marginBottom: "60px",
+      marginBottom: "50px",
       fontSize: "2.8rem",
       color: "#fff",
       fontWeight: "700",
       position: "relative",
     },
+    underline: {
+  content: "''",
+  position: "absolute",
+  bottom: "-15px",
+  left: "50%",
+  transform: "translateX(-50%)",
+  width: "80px",
+  height: "4px",
+  backgroundColor: "#00d4ff", // Matching your Neon Cyan theme
+  borderRadius: "2px",
+},
 
     contactContent: {
       display: "grid",
@@ -92,8 +104,8 @@ const Contact = () => {
     },
 
     contactInfo: {
-      color: "#ffd1ff",
-      padding: "30px",
+      color: "#ffffff",
+      padding: "95px",
       background: "rgba(255, 255, 255, 0.05)",
       borderRadius: "15px",
       backdropFilter: "blur(10px)",
@@ -110,7 +122,7 @@ const Contact = () => {
     label: {
       display: "block",
       marginBottom: "8px",
-      color: "#ff80ff",
+      color: "#00d4ff",
       fontWeight: "500",
       fontSize: "1rem",
     },
@@ -145,35 +157,37 @@ const Contact = () => {
       border: "none",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      background: "linear-gradient(135deg, #8a008a 0%, #6a006a 100%)",
+      background: "linear-gradient(135deg, #00d4ff 0%, #0ad2e8 100%)",
       color: "#fff",
-      boxShadow: "0 5px 15px rgba(138, 0, 138, 0.3)",
+      boxShadow: "0 5px 15px rgba(52, 197, 237, 0.3)",
     },
   };
 
   return (
     <section id="contact" style={styles.contact}>
       <div style={styles.container}>
-        <h2 style={styles.sectionTitle}>Get In Touch</h2>
-
+        <div style={{ position: 'relative', display: 'inline-block', left: '50%', transform: 'translateX(-50%)', marginBottom: '60px' }}>
+        <h2 style={{ ...styles.sectionTitle, marginBottom: '0' }}>Get In Touch</h2>
+        <div style={styles.underline}></div>
+      </div>
         <div style={styles.contactContent}>
           {/* LEFT SIDE */}
           <div style={styles.contactInfo}>
-            <h3 style={{ color: "#ff80ff", marginBottom: "20px", fontSize: "1.8rem" }}>
+            <h3 style={{ color: "#00d4ff", marginBottom: "30px", fontSize: "1.8rem" }}>
               Let’s Connect
             </h3>
-            <p style={{ marginBottom: "30px", color: "#ffd1ff" }}>
+            <p style={{ marginBottom: "30px", color: "#ffffff" }}>
               I'm always open to discussing new projects or creative ideas. Feel free to reach out!
             </p>
 
             <div>
-              <h4 style={{ color: "#ff80ff" }}>Email</h4>
-              <span style={{ color: "#ffd1ff" }}>niroshamadumali37@gmail.com</span>
+              <h4 style={{ color: "#00d4ff" }}>Email</h4>
+              <span style={{ color: "#ffffff" }}>niroshamadumali37@gmail.com</span>
             </div>
 
             <div style={{ marginTop: "20px" }}>
-              <h4 style={{ color: "#ff80ff" }}>Phone</h4>
-              <span style={{ color: "#ffd1ff" }}>076-0232418</span>
+              <h4 style={{ color: "#00d4ff" }}>Phone</h4>
+              <span style={{ color: "#ffffff" }}>076-0232418</span>
             </div>
           </div>
 
@@ -218,8 +232,8 @@ const Contact = () => {
               style={{
                 ...styles.button,
                 background: isSubmitting
-                  ? "linear-gradient(135deg, #6a006a 0%, #8a008a 100%)"
-                  : "linear-gradient(135deg, #8a008a 0%, #6a006a 100%)",
+                  ? "linear-gradient(135deg, #00d4ff 0%, #00d4ff 100%)"
+                  : "linear-gradient(135deg, #00d4ff 0%, #00d4ff 100%)",
                 cursor: isSubmitting ? "not-allowed" : "pointer",
               }}
             >

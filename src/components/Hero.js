@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import heroImage from '../images/me.png'; 
+import { FaDownload, FaArrowRight, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -14,19 +15,26 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>Hello, I'm <span className="highlight">Nirosha Madhumali</span></h1>
-            <p className="hero-me">Passionate about <span className='me'> Frontend Web Development</span></p>
+            <p className="hero-me">Passionate about <span className='typing-text'> Frontend Web Development</span></p>
             <p className="hero-subtitle">Undergraduate at Faculty of Computing</p>    
             <p className="hero-institution"> Sabaragamuwa University of Sri Lanka</p>
             <div className="hero-buttons">
               <a href="#projects" className="btn btn-primary">
                 <span>View My Work</span>
+                <a/>
+                <FaArrowRight/>
                 <i className="fas fa-arrow-right"></i>
               </a>
               <a href="#contact" className="btn btn-primary">
                 <span>Contact Me</span>
                 <i className="fas fa-envelope"></i>
+                <FaEnvelope/>
               </a>
-            </div>
+              <a href="/Nirosha_Madhumali_CV.pdf" download className="btn btn-outline">
+                <span>Download CV</span>
+                <FaDownload />
+              </a>
+            </div>   
           </div>
           <div className="hero-image">
             <div className="image-container">

@@ -1,6 +1,8 @@
 /* About.css */
 .about {
-  background: linear-gradient(135deg, #420042 0%, #2a002a 100%);
+  /* background: linear-gradient(135deg, #420042 0%, #2a002a 100%); */
+  background: #000000;
+  color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -44,7 +46,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: #ff6b6b;
+  background-color: #00d4ff; 
   border-radius: 2px;
 }
 
@@ -62,7 +64,7 @@
 }
 
 .about-text p {
-  color: #ffd1ff;
+  color: #ffffff;
   margin-bottom: 20px;
   font-size: 1.1rem;
   line-height: 1.8;
@@ -74,7 +76,7 @@
   content: '▹';
   position: absolute;
   left: 0;
-  color: #ff6b6b;
+  color: #00d4ff;
 }
 
 .about-image {
