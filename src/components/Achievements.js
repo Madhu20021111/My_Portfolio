@@ -38,7 +38,7 @@ const Achievements = () => {
         {/* Section 1: Certifications (Horizontal Flow) */}
         <div className="section-header">
           <h2 className="section-title">Certifications</h2>
-          <div className="underline"></div>
+          {/* <div className="underline"></div> */}
         </div>
         
         <div className="cert-flow-container">
@@ -56,7 +56,7 @@ const Achievements = () => {
         {/* Section 2: Other Achievements (Grid) */}
         <div className="section-header" style={{ marginTop: '80px' }}>
           <h2 className="section-title">Leadership & Awards</h2>
-          <div className="underline"></div>
+          {/* <div className="underline"></div> */}
         </div>
 
         <div className="achievements-grid">
