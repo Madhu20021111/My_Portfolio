@@ -1,0 +1,81 @@
+/* Achievements.css */
+.achievements {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  border-color: #00d4ff;
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.achievement-icon {
+  font-size: 3.5rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+}
+
+.achievement-card h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.achievement-org {
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.achievement-desc {
+  color: #b0b0b0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Animation for the cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.achievement-card {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .achievements {
+    padding: 60px 20px;
+  }
+}

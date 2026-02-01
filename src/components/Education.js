@@ -1,105 +1,66 @@
-// components/Education.js
 import React from 'react';
 import './Education.css';
-
-// Import your avatar image
 import educationAvatar from '../images/avataaar.png';
 
 const Education = () => {
+  const educationData = [
+    {
+      institution: "Sabaragamuwa University of Sri Lanka",
+      degree: "BSc (Hons) in Computing & Information Systems",
+      duration: "2024 - Present",
+      details: "Currently a second-year undergraduate in the Faculty of Computing, focusing on Software Engineering and UI/UX.",
+      highlights: ["GPA: [Insert Your GPA]", "Relevant Modules: DSA, OOP, DBMS, Web Development"]
+    },
+    {
+      institution: "[Your School Name]",
+      degree: "G.C.E. Advanced Level (Physical Science Stream)",
+      duration: "Completed [Year]",
+      details: "Successfully completed A/Ls with focus on Combined Mathematics, Physics, and Chemistry.",
+      results: "[Example: 3S or your specific results]"
+    },
+    {
+      institution: "[Your School Name]",
+      degree: "G.C.E. Ordinary Level",
+      duration: "Completed [Year]",
+      details: "Completed with high distinction.",
+      results: "[Example: 9A]"
+    }
+  ];
+
   return (
     <section id="education" className="education">
-      <div className="education-background">
-        <div className="floating-shapes shape-1"></div>
-        <div className="floating-shapes shape-2"></div>
-        <div className="floating-shapes shape-3"></div>
-      </div>
       <div className="container">
-        <h2 className="section-title">My Education</h2>
-        
+        <div style={{ position: 'relative', display: 'inline-block', left: '50%', transform: 'translateX(-50%)', marginBottom: '60px' }}>
+          <h2 className="section-title" style={{ marginBottom: '0' }}>My Education</h2>
+          <div className="underline"></div>
+        </div>
+
         <div className="education-content">
-          <div className="education-avatar" data-aos="zoom-in">
+          <div className="education-avatar">
             <img src={educationAvatar} alt="Education Avatar" className="avatar-image" />
             <div className="avatar-decoration">
               <div className="decoration-circle circle-1"></div>
-              <div className="decoration-circle circle-2"></div>
-              <div className="decoration-circle circle-3"></div>
             </div>
           </div>
-          
+
           <div className="education-items">
-            <div className="education-item" data-aos="fade-left" data-aos-delay="100">
-              <div className="education-timeline">
-                <div className="timeline-dot"></div>
-                <div className="timeline-line"></div>
-              </div>
-              <div className="education-card">
-                <div className="education-icon">
-                  <i className="fas fa-graduation-cap"></i>
+            {educationData.map((item, index) => (
+              <div key={index} className="education-item">
+                <div className="education-timeline">
+                  <div className="timeline-dot"></div>
+                  <div className="timeline-line"></div>
                 </div>
-                <div className="education-details">
-                  <h3>Sri Lanka Sabaragamuwa University</h3>
-                  <p className="degree">Bachelor of Science in Computing</p>
-                  <p className="duration">
-                    <i className="fas fa-calendar-alt"></i>
-                    2024 - Present
-                  </p>
-                  <div className="description">
-                    <p>
-                      Currently pursuing my undergraduate degree in the Faculty of Computing. 
-                      The program covers various aspects of computer science including:
-                    </p>
-                    <ul className="course-list">
-                      <li><i className="fas fa-code"></i> Software Engineering</li>
-                      <li><i className="fas fa-laptop-code"></i> Web Development</li>
-                      <li><i className="fas fa-database"></i> Database Management</li>
-                      <li><i className="fas fa-shield-alt"></i> Network Security</li>
-                      <li><i className="fas fa-brain"></i> Artificial Intelligence</li>
-                      <li><i className="fas fa-mobile-alt"></i> Mobile Application Development</li>
-                    </ul>
-                  </div>
-                  <div className="education-progress">
-                    <div className="progress-text">Degree Progress</div>
-                    <div className="progress-bar">
-                      <div className="progress-fill" style={{width: '75%'}}>
-                        <span className="progress-percentage">75%</span>
-                      </div>
-                    </div>
+                <div className="education-card">
+                  <div className="education-details">
+                    <h3>{item.institution}</h3>
+                    <p className="degree">{item.degree}</p>
+                    <p className="duration">{item.duration}</p>
+                    <p className="description">{item.details}</p>
+                    {item.results && <p className="results-tag">Results: {item.results}</p>}
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Add more education items as needed */}
-            <div className="education-item" data-aos="fade-left" data-aos-delay="200">
-              <div className="education-timeline">
-                <div className="timeline-dot"></div>
-                <div className="timeline-line"></div>
-              </div>
-              <div className="education-card">
-                <div className="education-icon">
-                  <i className="fas fa-certificate"></i>
-                </div>
-                <div className="education-details">
-                  <h3>Online Courses & Certifications</h3>
-                  <p className="degree">Programming & Development Courses</p>~
-                  <p className="duration">
-                    <i className="fas fa-calendar-alt"></i>
-                    2024 - Present
-                  </p>
-                  <div className="description">
-                    <p>
-                      Continuously expanding my knowledge through online platforms:
-                    </p>
-                    <ul className="course-list">
-                      <li><i className="fab fa-react"></i> React.js Development</li>
-                      <li><i className="fab fa-node-js"></i> Node.js & Express</li>
-                      <li><i className="fas fa-cloud"></i> Cloud Computing</li>
-                      <li><i className="fas fa-server"></i> Backend Development</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

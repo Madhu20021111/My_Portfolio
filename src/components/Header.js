@@ -1,6 +1,6 @@
 // components/Header.js
 import React, { useState } from 'react';
-import { FaUser, FaGraduationCap, FaCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaGraduationCap, FaCode, FaProjectDiagram, FaEnvelope, FaTrophy } from 'react-icons/fa';
 import './Header.css';
 
 const Header = () => {
@@ -26,6 +26,9 @@ const Header = () => {
             </li>
             <li>
               <a href="#skills"><FaCode className="nav-icon" /> Skills</a>
+            </li>
+            <li>
+            <a href="#achievements"><FaTrophy className="nav-icon" /> Achievements</a>
             </li>
             <li>
               <a href="#projects"><FaProjectDiagram className="nav-icon" /> Projects</a>
