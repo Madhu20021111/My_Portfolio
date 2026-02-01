@@ -12,18 +12,18 @@ const Education = () => {
       highlights: ["GPA: [Insert Your GPA]", "Relevant Modules: DSA, OOP, DBMS, Web Development"]
     },
     {
-      institution: "[Your School Name]",
+      institution: "Embilipitiya President's College",
       degree: "G.C.E. Advanced Level (Physical Science Stream)",
-      duration: "Completed [Year]",
+      duration: "Completed 2023",
       details: "Successfully completed A/Ls with focus on Combined Mathematics, Physics, and Chemistry.",
-      results: "[Example: 3S or your specific results]"
+      results: "BCC"
     },
     {
-      institution: "[Your School Name]",
+      institution: "R/Emb/ Jandura Maha Vidyalaya",
       degree: "G.C.E. Ordinary Level",
-      duration: "Completed [Year]",
+      duration: "Completed 2018",
       details: "Completed with high distinction.",
-      results: "[Example: 9A]"
+      results: "9A"
     }
   ];
 
@@ -32,7 +32,6 @@ const Education = () => {
       <div className="container">
         <div style={{ position: 'relative', display: 'inline-block', left: '50%', transform: 'translateX(-50%)', marginBottom: '60px' }}>
           <h2 className="section-title" style={{ marginBottom: '0' }}>My Education</h2>
-          <div className="underline"></div>
         </div>
 
         <div className="education-content">

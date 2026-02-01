@@ -10,8 +10,8 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I am an enthusiastic undergraduate student at the Faculty of Computing, 
-              Sri Lanka Sabaragamuwa University. I'm passionate about web development, 
+              I am an Tech enthusiastic undergraduate student at the Faculty of Computing, 
+              Sabaragamuwa University of Sri Lanka. I'm passionate about Full stack web development, 
               software engineering, and creating innovative solutions to real-world problems.
             </p>
             <p>

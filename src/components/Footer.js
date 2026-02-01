@@ -1,6 +1,6 @@
 // components/Footer.js
 import React from "react";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaMedium } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -18,6 +18,9 @@ const Footer = () => {
             </a>
             <a href="https://github.com/Madhu20021111" aria-label="GitHub">
               <FaGithub className="footer-icon" />
+            </a>
+            <a href="https://medium.com/@niroshamadumali37" aria-label="Medium">
+              <FaMedium className="footer-icon" />
             </a>
             <a href="https://www.facebook.com/nirosha.madumali.7547" aria-label="Facebook">
               <FaFacebook className="footer-icon" />
