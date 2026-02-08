@@ -1,33 +1,44 @@
 import React from 'react';
-import { FaTrophy, FaGithub, FaAward, FaUsers, FaCertificate } from 'react-icons/fa';
+import { FaGithub, FaCertificate, FaTrophy, FaAward, FaUsers } from 'react-icons/fa';
 import './Achievements.css';
+
+// Import your certificate images
+import beginner from '../images/beginner.png';
+import apilearning from '../images/apilearning.png';
+import actions from '../images/actions.png';
+import mcpserver from '../images/mcpserver.png';
+import webdesign from '../images/webdesign.png';
+import devops from '../images/devops.png';
+import PearHack from '../images/pearhack.png';
 
 const Achievements = () => {
   const certifications = [
-    { title: "GitHub Actions", org: "GitHub Skills", icon: <FaGithub />, image: null },
-    { title: "API Learning 101", org: "GitHub Skills", icon: <FaGithub />, image: null },
-    { title: "React Development", org: "Online", icon: <FaCertificate />, image: null },
-    { title: "GitHub for Beginners", org: "GitHub Skills", icon: <FaGithub />, image: null },
-    // Add more here to see the scroll effect
+    { title: "PearlHack V3.0", org: "Sabaragamuwa University of Sri lanka", icon: <FaCertificate />, image: PearHack },
+    { title: "Web design for beginners", org: "University of Moratuwa", icon: <FaCertificate />, image: webdesign },
+    { title: "DevOps 101", org: "Simplilearn", icon: <FaCertificate />, image: devops },
+    { title: "GitHub Actions", org: "GitHub Skills", icon: <FaGithub />, image: actions },
+    { title: "GitHub for beginners", org: "GitHub Skills", icon: <FaGithub />, image: beginner },
+    { title: "API Learning 101", org: "GitHub Skills", icon: <FaGithub />, image: apilearning },
+    { title: "MCP Server", org: "GitHub Skills", icon: <FaGithub />, image: mcpserver }
   ];
 
   const otherAchievements = [
     {
-      title: "PearHack 3.0 - Top 5",
-      org: "Hackathon",
-      desc: "Top 5 team for AR/VR solution for urban women.",
+      title: "PearHack 3.0 - Top 5 Finalist",
+      org: "Hackathon Achievement",
+      desc: "Ranked among the top 5 teams for designing an innovative AR/VR mobile solution aimed at improving the lifestyle of urban women.",
       icon: <FaTrophy />
     },
     {
       title: "Vice Secretary",
-      org: "Buddhist Association, SUSL",
-      desc: "Elected executive role managing administrative operations for 2025/26.",
+      org: "Buddhist Association - SUSL",
+      desc: "Recently appointed to manage administrative operations and executive coordination for the 2026/2027 term.",
       icon: <FaUsers />
     },
     {
-      title: "Content Writing Leader",
-      org: "Buddhist Association, SUSL",
-      desc: "Awarded for leading the content team and Sinhala typing contributions.",
+      title: "Content Writing Team Leader",
+      org: "Buddhist Association - SUSL",
+      desc: "Awarded a Certificate of Appreciation for leading the content team and managing Sinhala technical writing for the 2025/2026 term.",
       icon: <FaAward />
     }
   ];
@@ -36,27 +47,35 @@ const Achievements = () => {
     <section id="achievements" className="achievements">
       <div className="container">
         {/* Section 1: Certifications (Horizontal Flow) */}
-        <div className="section-header">
-          <h2 className="section-title">Certifications</h2>
-          {/* <div className="underline"></div> */}
+        <div style={{ position: 'relative', textAlign: 'center', marginBottom: '40px' }}>
+          <h2 className="section-title" style={{ marginBottom: '0' }}>Certifications</h2>
+          <div className="underline" style={{ margin: '10px auto' }}></div>
         </div>
         
         <div className="cert-flow-container">
           <div className="cert-track">
             {certifications.map((cert, index) => (
               <div key={index} className="cert-flow-card">
-                <div className="cert-flow-icon">{cert.icon}</div>
-                <h4>{cert.title}</h4>
-                <span>{cert.org}</span>
+                <div className="cert-img-box">
+                  {cert.image ? (
+                    <img src={cert.image} alt={cert.title} />
+                  ) : (
+                    <div className="cert-placeholder">{cert.icon}</div>
+                  )}
+                </div>
+                <div className="cert-info">
+                  <h4>{cert.title}</h4>
+                  <span>{cert.org}</span>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Section 2: Other Achievements (Grid) */}
-        <div className="section-header" style={{ marginTop: '80px' }}>
-          <h2 className="section-title">Leadership & Awards</h2>
-          {/* <div className="underline"></div> */}
+        {/* Section 2: Leadership & Awards (Grid) */}
+        <div style={{ position: 'relative', textAlign: 'center', margin: '80px 0 40px' }}>
+          <h2 className="section-title" style={{ marginBottom: '0' }}>Leadership & Awards</h2>
+          <div className="underline" style={{ margin: '10px auto' }}></div>
         </div>
 
         <div className="achievements-grid">

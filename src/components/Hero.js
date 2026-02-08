@@ -19,7 +19,7 @@ const Hero = () => {
             <p className="hero-subtitle">Undergraduate at Faculty of Computing</p>    
             <p className="hero-institution"> Sabaragamuwa University of Sri Lanka</p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn btn-primary">
+              {/* <a href="#projects" className="btn btn-primary">
                 <span>View My Work</span>
                 <a/>
                 <FaArrowRight/>
@@ -29,7 +29,7 @@ const Hero = () => {
                 <span>Contact Me</span>
                 <i className="fas fa-envelope"></i>
                 <FaEnvelope/>
-              </a>
+              </a> */}
               <a href="/Nirosha_Madhumali_CV.pdf" download className="btn btn-outline">
                 <span>Download CV</span>
                 <FaDownload />
