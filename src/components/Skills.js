@@ -96,9 +96,9 @@ const Skills = () => {
       </div>
       <div className="container">
         <h2 className="section-title">My Skills</h2>
-        <p className="section-subtitle">
+        {/* <p className="section-subtitle">
           Technologies I work with to bring ideas to life
-        </p>
+        </p> */}
 
         <div className="skills-container">
           {skillCategories.map((category, index) => (
@@ -147,7 +147,7 @@ const Skills = () => {
         </div>
 
         {/* Additional Skills Section */}
-        <div className="additional-skills">
+        {/* <div className="additional-skills">
           <h3 className="additional-title">Also Familiar With</h3>
           <div className="skills-tags">
             {[
@@ -164,7 +164,7 @@ const Skills = () => {
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
