@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import heroImage from '../images/me.png'; 
+import heroImage from '../images/me.webp'; 
 import { FaDownload, FaArrowRight, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
