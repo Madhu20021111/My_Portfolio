@@ -146,8 +146,8 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Additional Skills Section */}
-        {/* <div className="additional-skills">
+        {/* Additional Skills Section 
+        <div className="additional-skills">
           <h3 className="additional-title">Also Familiar With</h3>
           <div className="skills-tags">
             {[
