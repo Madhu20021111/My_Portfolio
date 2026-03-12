@@ -186,7 +186,7 @@ const Contact = () => {
             </div>
 
             <div style={{ marginTop: "20px" }}>
-              <h4 style={{ color: "#00d4ff" }}>Phone</h4>
+              <h4 style={{ color: "#00d4ff" }}>Whatsapp</h4>
               <span style={{ color: "#ffffff" }}>076-0232418</span>
             </div>
           </div>

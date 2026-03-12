@@ -37,21 +37,21 @@ const Skills = () => {
     {
       title: "Backend Development",
       skills: [
-        {
-          name: "Node.js",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-          level: 75,
-        },
-        {
-          name: "Express",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-          level: 70,
-        },
+        // {
+        //   name: "Node.js",
+        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        //   level: 75,
+        // },
+        // {
+        //   name: "Express",
+        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        //   level: 70,
+        // },
        
         {
           name: "Java",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-          level: 75,
+          level: 50,
         },
       ],
     },
