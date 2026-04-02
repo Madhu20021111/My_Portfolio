@@ -209,6 +209,11 @@
   margin-top: 30px;
 }
 
+.btn-content{
+  justify-content: center;
+  margin-left: 15px;
+}
+
 .hero-buttons .btn {
   display: inline-flex;
   align-items: center;
@@ -237,6 +242,7 @@
   color: #000000;
   border: 2px solid #00d4ff;
 }
+
 .btn-outline:hover {
   background: rgba(0, 212, 255, 0.1);
   transform: translateY(-3px);

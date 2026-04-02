@@ -19,19 +19,10 @@ const Hero = () => {
             <p className="hero-subtitle">Undergraduate at Faculty of Computing</p>    
             <p className="hero-institution"> Sabaragamuwa University of Sri Lanka</p>
             <div className="hero-buttons">
-              {/* <a href="#projects" className="btn btn-primary">
-                <span>View My Work</span>
-                <a/>
-                <FaArrowRight/>
-                <i className="fas fa-arrow-right"></i>
-              </a>
-              <a href="#contact" className="btn btn-primary">
-                <span>Contact Me</span>
-                <i className="fas fa-envelope"></i>
-                <FaEnvelope/>
-              </a> */}
               <a href="/Nirosha_Madhumali_CV.pdf" download className="btn btn-outline">
+                <div className="btn-content">
                 <span>Download CV</span>
+                </div>
                 <FaDownload />
               </a>
             </div>   
