@@ -364,6 +364,9 @@
   .education-avatar {
     order: -1;
   }
+  .education-content{
+    align-items: center;
+  }
   
   .avatar-image {
     width: 220px;

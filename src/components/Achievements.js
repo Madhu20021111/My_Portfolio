@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaCertificate, FaTrophy, FaAward, FaUsers } from 'react-icons/fa';
+import { FaGithub, FaCertificate, FaTrophy, FaAward, FaUsers,FaPenNib } from 'react-icons/fa';
 import './Achievements.css';
 
 // Import your certificate images
@@ -74,7 +74,7 @@ const Achievements = () => {
 
         {/* Section 2: Leadership & Awards (Grid) */}
         <div style={{ position: 'relative', textAlign: 'center', margin: '80px 0 40px' }}>
-          <h2 className="section-title" style={{ marginBottom: '0' }}>Leadership & Awards</h2>
+          <h2 className="section-title" style={{ marginBottom: '0' }}>Leadership & Experiences</h2>
           <div className="underline" style={{ margin: '10px auto' }}></div>
         </div>
 
@@ -87,6 +87,16 @@ const Achievements = () => {
               <p className="achievement-desc">{item.desc}</p>
             </div>
           ))}
+          
+        <div className="achievement-card">
+          <div className="achievement-icon"><FaPenNib /></div> 
+          <h3>Creative Writer</h3>
+          <span className="achievement-org">Neovise</span>
+          <p className="achievement-desc">
+            Developing compelling digital content and creative narratives while ensuring high-quality engagement for diverse audiences.
+          </p>
+          <div className="results-tag">Current Role</div>
+        </div>
         </div>
       </div>
     </section>

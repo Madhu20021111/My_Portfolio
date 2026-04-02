@@ -180,7 +180,8 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px) 
+{
     .projects h2 {
         font-size: 1.8rem;
     }

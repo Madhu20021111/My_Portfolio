@@ -23,6 +23,9 @@ const About = () => {
               When I'm not coding, I enjoy exploring new technologies, reading tech blogs, 
               and participating in coding communities.
             </p>
+            <p>
+              Currently I am contributing as a creative writer at Neovise.
+            </p>
           </div>
           <div className="about-image">
             <div className="image-container">
