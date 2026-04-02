@@ -72,7 +72,7 @@ const Achievements = () => {
           </div>
         </div>
 
-        {/* Section 2: Leadership & Awards (Grid) */}
+        {/* Section 2: Leadership & Experiences (Grid) */}
         <div style={{ position: 'relative', textAlign: 'center', margin: '80px 0 40px' }}>
           <h2 className="section-title" style={{ marginBottom: '0' }}>Leadership & Experiences</h2>
           <div className="underline" style={{ margin: '10px auto' }}></div>
@@ -89,14 +89,23 @@ const Achievements = () => {
           ))}
           
         <div className="achievement-card">
-          <div className="achievement-icon"><FaPenNib /></div> 
-          <h3>Creative Writer</h3>
-          <span className="achievement-org">Neovise</span>
-          <p className="achievement-desc">
-            Developing compelling digital content and creative narratives while ensuring high-quality engagement for diverse audiences.
-          </p>
+        <div className="achievement-icon"><FaPenNib /></div> 
+        <h3>Creative Writer</h3>
+        <span className="achievement-org">Neovise</span>
+        <p className="achievement-desc">
+          Developing compelling digital content and creative narratives while ensuring high-quality engagement for diverse audiences.
+        </p>
+
+        {/* Clickable Current Role Button */}
+        <a 
+          href="https://neovise.me/author/nirosha-madhumali/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="results-tag-link"
+        >
           <div className="results-tag">Current Role</div>
-        </div>
+        </a>
+      </div>
         </div>
       </div>
     </section>
