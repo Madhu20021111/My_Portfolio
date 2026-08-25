@@ -13,7 +13,7 @@ const Footer = () => {
             <p>&copy; {new Date().getFullYear()} Nirosha Madhumali. All Rights Reserved.</p>
           </div>
           <div className="social-links">
-            <a href="www.linkedin.com/in/nirosha-madhumali-a2325b333" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/nirosha-madhumali-a2325b333" aria-label="LinkedIn">
               <FaLinkedin className="footer-icon" />
             </a>
             <a href="https://github.com/Madhu20021111" aria-label="GitHub">
