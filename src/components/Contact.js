@@ -64,7 +64,6 @@ const Contact = () => {
 
   const styles = {
     contact: {
-      // background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)",
       background: "#000000",
       padding: "100px 20px",
       minHeight: "100vh",

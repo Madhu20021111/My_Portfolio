@@ -17,12 +17,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.55;
+  opacity: 0.32;
   transition: opacity 0.5s ease;
 }
 
 @media (max-width: 768px) {
   .sphere-canvas {
-    opacity: 0.4;
+    opacity: 0.25;
   }
 }
