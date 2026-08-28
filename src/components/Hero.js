@@ -1,16 +1,13 @@
 import React from 'react';
 import './Hero.css';
 import heroImage from '../images/me.png'; 
-import { FaDownload, FaArrowRight, FaEnvelope } from 'react-icons/fa';
+import { FaDownload, FaEnvelope } from 'react-icons/fa';
+import SphereBackground from './SphereBackground';
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-background">
-        <div className="floating-shapes shape-1"></div>
-        <div className="floating-shapes shape-2"></div>
-        <div className="floating-shapes shape-3"></div>
-      </div>
+      <SphereBackground />
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
@@ -21,9 +18,15 @@ const Hero = () => {
             <div className="hero-buttons">
               <a href="/Nirosha_Madhumali_CV.pdf" download className="btn btn-outline">
                 <div className="btn-content">
-                <span>Download CV</span>
+                  <span>Download CV</span>
                 </div>
                 <FaDownload />
+              </a>
+              <a href="#contact" className="btn btn-outline">
+                <div className="btn-content">
+                  <span>Contact Me</span>
+                </div>
+                <FaEnvelope />
               </a>
             </div>   
           </div>

@@ -2,8 +2,6 @@
 .hero {
   padding: 120px 0 80px;
   background: #000000;
-  /* background: linear-gradient(135deg, #380038 0%, #2a002a 100%); */
-  /* background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); */
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -256,15 +254,11 @@
   transform: translateY(2px); /* Slight bounce for the download icon */
 }
 
-.hero-buttons .btn span {
-  position: relative;
-  z-index: 2;
-}
-
+.hero-buttons .btn span,
+.hero-buttons .btn svg,
 .hero-buttons .btn i {
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease;
 }
 
 .hero-buttons .btn::before {

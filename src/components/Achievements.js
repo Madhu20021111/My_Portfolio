@@ -70,6 +70,23 @@ const Achievements = () => {
               </div>
             ))}
           </div>
+          <div className="cert-track" aria-hidden="true">
+            {certifications.map((cert, index) => (
+              <div key={`dup-${index}`} className="cert-flow-card">
+                <div className="cert-img-box">
+                  {cert.image ? (
+                    <img src={cert.image} alt={cert.title} />
+                  ) : (
+                    <div className="cert-placeholder">{cert.icon}</div>
+                  )}
+                </div>
+                <div className="cert-info">
+                  <h4>{cert.title}</h4>
+                  <span>{cert.org}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Section 2: Leadership & Experiences (Grid) */}

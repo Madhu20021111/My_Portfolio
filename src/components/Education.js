@@ -1,5 +1,6 @@
 import React from 'react';
 import './Education.css';
+import RobotAnimation from './RobotAnimation';
 
 const Education = () => {
   const educationData = [
@@ -34,6 +35,10 @@ const Education = () => {
         </div>
 
         <div className="education-content">
+          <div className="education-robot-container">
+            <RobotAnimation />
+          </div>
+
           <div className="education-items">
             {educationData.map((item, index) => (
               <div key={index} className="education-item">

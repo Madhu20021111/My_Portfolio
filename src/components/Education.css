@@ -99,12 +99,23 @@
 
 .education-content {
   display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.education-robot-container {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  position: relative;
+  min-height: 340px;
 }
 
 .education-items {
-  max-width: 850px;
+  flex: 1.6;
+  max-width: 750px;
   width: 100%;
   position: relative;
 }
@@ -278,7 +289,19 @@
 /* Responsive Design */
 @media (max-width: 992px) {
   .education-content {
+    flex-direction: column;
+    gap: 40px;
     align-items: center;
+  }
+  
+  .education-robot-container {
+    order: -1;
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  .education-items {
+    max-width: 100%;
   }
 }
 

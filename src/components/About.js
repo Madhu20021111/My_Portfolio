@@ -8,6 +8,16 @@ const About = () => {
       <div className="container">
         <h2>About Me</h2>
         <div className="about-content">
+          <div className="about-image">
+            <div className="image-container">
+              <div className="image-placeholder">
+                <img src={AboutImage} alt="Nirosha Madhumali" className="about-profile-img" />
+              </div>
+              <div className="floating-element element-1"></div>
+              <div className="floating-element element-2"></div>
+              <div className="floating-element element-3"></div>
+            </div>
+          </div>
           <div className="about-text">
             <p>
               I am an Tech enthusiastic undergraduate student at the Faculty of Computing, 
@@ -26,16 +36,6 @@ const About = () => {
             <p>
               Currently I am contributing as a creative writer at Neovise.
             </p>
-          </div>
-          <div className="about-image">
-            <div className="image-container">
-              <div className="image-placeholder">
-                <img src={AboutImage} alt="Nirosha Madhumali" className="about-profile-img" />
-              </div>
-              <div className="floating-element element-1"></div>
-              <div className="floating-element element-2"></div>
-              <div className="floating-element element-3"></div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,192 @@
+/* RobotAnimation.css */
+
+.hero-robot-wrapper {
+  position: relative;
+  width: 290px;
+  height: 350px;
+  z-index: 4;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.4s ease;
+}
+
+.hero-robot-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.45));
+}
+
+/* --- LEVITATION / FLOATING --- */
+.cute-robot-floating-body {
+  animation: cuteRobotFloat 4.5s ease-in-out infinite;
+  transform-origin: 160px 260px;
+}
+
+@keyframes cuteRobotFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(0.5deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+/* Floor Shadow pulsing with floating */
+.cute-robot-floor-shadow {
+  animation: cuteShadowPulse 4.5s ease-in-out infinite;
+  transform-origin: 160px 355px;
+}
+
+@keyframes cuteShadowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(0.68);
+    opacity: 0.28;
+  }
+}
+
+/* --- HEAD BOBBING --- */
+.cute-robot-head-group {
+  animation: cuteHeadTilt 5s ease-in-out infinite;
+  transform-origin: 160px 174px;
+}
+
+@keyframes cuteHeadTilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+}
+
+/* --- DIGITAL EYES BLINKING --- */
+.cute-robot-eyes {
+  animation: cuteBlink 4.2s infinite;
+  transform-origin: 160px 106px;
+}
+
+@keyframes cuteBlink {
+  0%, 92%, 100% {
+    transform: scaleY(1);
+  }
+  94%, 98% {
+    transform: scaleY(0.12);
+  }
+}
+
+/* --- CHEST HEART GLOWING PULSE --- */
+.cute-robot-heart-pulse {
+  animation: cuteHeartGlow 2.2s ease-in-out infinite alternate;
+  transform-origin: 160px 213px;
+}
+
+@keyframes cuteHeartGlow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #00d4ff);
+  }
+}
+
+/* --- ANTENNA TIP PULSE --- */
+.antenna-glow-pulse {
+  animation: antennaTwinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes antennaTwinkle {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* --- LEFT ARM GENTLE SWAY --- */
+.cute-robot-left-arm {
+  animation: leftArmBreathe 4.5s ease-in-out infinite;
+  transform-origin: 104px 195px;
+}
+
+@keyframes leftArmBreathe {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* --- RIGHT ARM CUTE WAVING --- */
+.cute-robot-right-arm {
+  animation: gentleWave 2.8s ease-in-out infinite alternate;
+  transform-origin: 216px 195px;
+  transition: all 0.3s ease;
+}
+
+@keyframes gentleWave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-12deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+/* Excited Waving on Hover */
+.hero-robot-wrapper:hover .cute-robot-right-arm,
+.hero-robot-wrapper.is-excited .cute-robot-right-arm {
+  animation: excitedCuteWave 0.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes excitedCuteWave {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(18deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-robot-wrapper {
+    width: 250px;
+    height: 310px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-robot-wrapper {
+    width: 210px;
+    height: 270px;
+  }
+}
