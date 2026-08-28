@@ -7,14 +7,24 @@ import beginner from '../images/beginner.png';
 import apilearning from '../images/apilearning.png';
 import actions from '../images/actions.png';
 import mcpserver from '../images/mcpserver.png';
+import aurelia from '../images/Aurelia.png';
+import aithon from '../images/Aithon.png';
+import ballerina from '../images/Ballerina.png';
+import hackelite from '../images/Hackelite 2.0.png';
 import webdesign from '../images/webdesign.png';
+import Python from '../images/python.png';
 import devops from '../images/devops.png';
 import PearHack from '../images/pearhack.png';
 
 const Achievements = () => {
   const certifications = [
     { title: "PearlHack V3.0", org: "Sabaragamuwa University of Sri lanka", icon: <FaCertificate />, image: PearHack },
+    { title: "Aurelia 2.0", org: "WIE,IEEE Student Branch", icon: <FaCertificate />, image: aurelia },
+    { title: "AIthon", org: "Hemas", icon: <FaCertificate />, image: aithon },
+    { title: "Ballerina", org: "IEEE Computer Society, UOM", icon: <FaCertificate />, image: ballerina },
+    { title: "Hackelite 2.0", org: "IEEE Student Branch, UOM", icon: <FaCertificate />, image: hackelite },
     { title: "Web design for beginners", org: "University of Moratuwa", icon: <FaCertificate />, image: webdesign },
+    { title: "Python for beginners", org: "University of Moratuwa", icon: <FaCertificate />, image: Python },
     { title: "DevOps 101", org: "Simplilearn", icon: <FaCertificate />, image: devops },
     { title: "GitHub Actions", org: "GitHub Skills", icon: <FaGithub />, image: actions },
     { title: "GitHub for beginners", org: "GitHub Skills", icon: <FaGithub />, image: beginner },
