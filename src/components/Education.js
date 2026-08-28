@@ -1,6 +1,5 @@
 import React from 'react';
 import './Education.css';
-import educationAvatar from '../images/avataaar.png';
 
 const Education = () => {
   const educationData = [
@@ -35,13 +34,6 @@ const Education = () => {
         </div>
 
         <div className="education-content">
-          <div className="education-avatar">
-            <img src={educationAvatar} alt="Education Avatar" className="avatar-image" />
-            <div className="avatar-decoration">
-              <div className="decoration-circle circle-1"></div>
-            </div>
-          </div>
-
           <div className="education-items">
             {educationData.map((item, index) => (
               <div key={index} className="education-item">
