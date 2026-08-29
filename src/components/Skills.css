@@ -90,67 +90,9 @@
   line-height: 1.6;
 }
 
-/* Category Filter Tabs */
-.skills-filter-pills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 45px;
-  padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 30px;
-  backdrop-filter: blur(12px);
-}
-
-.skill-filter-btn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
-  padding: 8px 16px;
-  border-radius: 25px;
-  font-size: 0.86rem;
-  font-weight: 500;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  font-family: 'Poppins', sans-serif;
-}
-
-.skill-filter-btn:hover {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.4);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-.skill-filter-btn.active {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.22) 0%, rgba(0, 120, 255, 0.3) 100%);
-  border-color: #00d4ff;
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: 0 0 18px rgba(0, 212, 255, 0.3);
-}
-
-.filter-count {
-  font-size: 0.72rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: #cbd5e1;
-  padding: 2px 7px;
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-.skill-filter-btn.active .filter-count {
-  background: #00d4ff;
-  color: #000000;
-}
-
 /* Modern Grid Layout */
 .skills-modern-grid {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 28px;

@@ -1,5 +1,5 @@
 // components/Skills.js
-import React, { useState } from "react";
+import React from "react";
 import {
   FaCode,
   FaLaptopCode,
@@ -43,8 +43,6 @@ import { VscCode } from "react-icons/vsc";
 import "./Skills.css";
 
 const Skills = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
-
   const skillCategories = [
     {
       id: "languages",
@@ -57,8 +55,7 @@ const Skills = () => {
         { name: "TypeScript", icon: <SiTypescript style={{ color: "#3178C6" }} /> },
         { name: "Python", icon: <SiPython style={{ color: "#3776AB" }} /> },
         { name: "Java", icon: <FaJava style={{ color: "#E76F00" }} /> },
-        { name: "C", icon: <SiC style={{ color: "#A8B9CC" }} /> },
-        // { name: "C++", icon: <SiCplusplus style={{ color: "#00599C" }} /> }
+        { name: "C", icon: <SiC style={{ color: "#A8B9CC" }} /> }
       ]
     },
     {
@@ -131,7 +128,6 @@ const Skills = () => {
       skills: [
         { name: "Git", icon: <SiGit style={{ color: "#F05032" }} /> },
         { name: "GitHub", icon: <SiGithub style={{ color: "#ffffff" }} /> },
-        // { name: "Postman", icon: <SiPostman style={{ color: "#FF6C37" }} /> },
         { name: "VS Code", icon: <VscCode style={{ color: "#007ACC" }} /> },
         { name: "Android Studio", icon: <SiAndroidstudio style={{ color: "#3DDC84" }} /> },
         { name: "IntelliJ IDEA", icon: <SiIntellijidea style={{ color: "#FE315D" }} /> }
@@ -145,18 +141,11 @@ const Skills = () => {
       description: "Authentication, cloud & real-time protocols",
       skills: [
         { name: "Firebase", icon: <SiFirebase style={{ color: "#FFCA28" }} /> },
-        // { name: "JWT", icon: <SiJsonwebtokens style={{ color: "#D63AFF" }} /> },
         { name: "WebRTC", icon: <SiWebrtc style={{ color: "#00d4ff" }} /> },
         { name: "GitHub Actions", icon: <SiGithubactions style={{ color: "#2088FF" }} /> }
       ]
     }
   ];
-
-  const totalSkillsCount = skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0);
-
-  const filteredCategories = activeFilter === "All"
-    ? skillCategories
-    : skillCategories.filter(cat => cat.title === activeFilter);
 
   return (
     <section id="skills" className="skills">
@@ -176,29 +165,9 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="skills-filter-pills">
-          <button 
-            className={`skill-filter-btn ${activeFilter === "All" ? "active" : ""}`}
-            onClick={() => setActiveFilter("All")}
-          >
-            All Tech <span className="filter-count">{totalSkillsCount}</span>
-          </button>
-          {skillCategories.map((category) => (
-            <button
-              key={category.id}
-              className={`skill-filter-btn ${activeFilter === category.title ? "active" : ""}`}
-              onClick={() => setActiveFilter(category.title)}
-            >
-              {category.title}
-              <span className="filter-count">{category.skills.length}</span>
-            </button>
-          ))}
-        </div>
-
         {/* Skills Cards Grid */}
         <div className="skills-modern-grid">
-          {filteredCategories.map((category) => (
+          {skillCategories.map((category) => (
             <div key={category.id} className="skill-category-card">
               <div 
                 className="category-card-top-accent" 
@@ -222,9 +191,6 @@ const Skills = () => {
                   <h3 className="category-card-title">{category.title}</h3>
                   <span className="category-card-desc">{category.description}</span>
                 </div>
-                {/* <span className="category-badge-count">
-                  {category.skills.length} items
-                </span> */}
               </div>
 
               {/* Skills Tags Grid */}
