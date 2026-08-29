@@ -4,7 +4,7 @@
 .contact {
   background: #000000;
   color: #ffffff;
-  padding: 110px 0 120px;
+  padding: 60px 0 65px;
   position: relative;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
@@ -55,7 +55,7 @@
 /* Header */
 .contact-header-wrapper {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

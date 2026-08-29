@@ -3,7 +3,7 @@
 
 .achievements {
   background: #000000;
-  padding: 110px 0 120px;
+  padding: 60px 0 65px;
   position: relative;
   overflow: hidden;
   color: #ffffff;
@@ -374,7 +374,7 @@
 /* Section 2: Leadership & Experiences */
 .leadership-section-divider {
   text-align: center;
-  margin: 90px 0 45px;
+  margin: 45px 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;

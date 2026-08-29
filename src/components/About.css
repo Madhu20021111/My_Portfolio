@@ -2,6 +2,7 @@
 .about {
   background: #000000;
   color: #ffffff;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -32,7 +33,7 @@
   color: #fffaff;
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   position: relative;
   z-index: 2;
 }
