@@ -11,7 +11,6 @@ import {
   FaChevronLeft, 
   FaChevronRight, 
   FaExternalLinkAlt,
-  FaShieldAlt,
   FaCode
 } from 'react-icons/fa';
 import './Achievements.css';
@@ -224,12 +223,11 @@ const Achievements = () => {
       <div className="container">
         {/* Section Header */}
         <div className="achievements-header-wrapper">
-          <div className="achievements-badge">
-            <FaShieldAlt className="badge-icon" />
-            <span>Credentials & Accreditations</span>
-          </div>
+          {/* <div className="achievements-badge"> */}
+            {/* <FaShieldAlt className="badge-icon" /> */}
+            {/* <span>Credentials & Accreditations</span> */}
+          {/* </div> */}
           <h2 className="section-title">Certifications & Milestones</h2>
-          <div className="underline"></div>
           <p className="achievements-subtitle">
             Continuous learning journey validating expertise in DevOps, Cloud, AI Protocols, and Competitive Problem Solving.
           </p>
@@ -362,12 +360,11 @@ const Achievements = () => {
 
         {/* Section 2: Leadership & Experiences */}
         <div className="leadership-section-divider">
-          <div className="achievements-badge">
-            <FaAward className="badge-icon" />
-            <span>Impact & Governance</span>
-          </div>
+          {/* <div className="achievements-badge"> */}
+            {/* <FaAward className="badge-icon" /> */}
+            {/* <span>Impact & Governance</span> */}
+          {/* </div> */}
           <h2 className="section-title">Leadership & Experiences</h2>
-          <div className="underline"></div>
           <p className="achievements-subtitle">
             Demonstrated team management, organizational leadership, and editorial contribution.
           </p>

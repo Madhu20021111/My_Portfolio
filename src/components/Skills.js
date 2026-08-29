@@ -1,170 +1,247 @@
 // components/Skills.js
-import React from "react";
+import React, { useState } from "react";
+import {
+  FaCode,
+  FaLaptopCode,
+  FaServer,
+  FaMobileAlt,
+  FaDatabase,
+  FaPaintBrush,
+  FaTools,
+  FaLayerGroup,
+  FaJava,
+  FaNetworkWired,
+  FaMobile
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiC,
+  SiCplusplus,
+  SiReact,
+  SiNextdotjs,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiExpo,
+  SiMongodb,
+  SiMysql,
+  SiSqlite,
+  SiFigma,
+  SiCanva,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiAndroidstudio,
+  SiIntellijidea,
+  SiFirebase,
+  SiJsonwebtokens,
+  SiWebrtc,
+  SiGithubactions
+} from "react-icons/si";
+import { VscCode } from "react-icons/vsc";
 import "./Skills.css";
 
 const Skills = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
   const skillCategories = [
     {
-      title: "Frontend Development",
+      id: "languages",
+      title: "Languages",
+      icon: <FaCode />,
+      color: "#00d4ff",
+      description: "Core programming and scripting languages",
       skills: [
-        {
-          name: "HTML5",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-          level: 90,
-        },
-        {
-          name: "CSS3",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-          level: 95,
-        },
-        {
-          name: "JavaScript",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-          level: 60,
-        },
-        {
-          name: "React",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-          level: 60,
-        },
-        {
-          name: "Bootstrap",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-          level: 50,
-        },
-      ],
+        { name: "JavaScript", icon: <SiJavascript style={{ color: "#F7DF1E" }} /> },
+        { name: "TypeScript", icon: <SiTypescript style={{ color: "#3178C6" }} /> },
+        { name: "Python", icon: <SiPython style={{ color: "#3776AB" }} /> },
+        { name: "Java", icon: <FaJava style={{ color: "#E76F00" }} /> },
+        { name: "C", icon: <SiC style={{ color: "#A8B9CC" }} /> },
+        // { name: "C++", icon: <SiCplusplus style={{ color: "#00599C" }} /> }
+      ]
     },
     {
-      title: "Backend Development",
+      id: "frontend",
+      title: "Frontend",
+      icon: <FaLaptopCode />,
+      color: "#61DAFB",
+      description: "Modern web UI frameworks & styles",
       skills: [
-        // {
-        //   name: "Node.js",
-        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        //   level: 75,
-        // },
-        // {
-        //   name: "Express",
-        //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-        //   level: 70,
-        // },
-       
-        {
-          name: "Java",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-          level: 50,
-        },
-      ],
+        { name: "React.js", icon: <SiReact style={{ color: "#61DAFB" }} /> },
+        { name: "Next.js", icon: <SiNextdotjs style={{ color: "#ffffff" }} /> },
+        { name: "HTML5", icon: <SiHtml5 style={{ color: "#E34F26" }} /> },
+        { name: "CSS3", icon: <SiCss3 style={{ color: "#1572B6" }} /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss style={{ color: "#06B6D4" }} /> }
+      ]
     },
     {
-      title: "Database & Tools",
+      id: "backend",
+      title: "Backend",
+      icon: <FaServer />,
+      color: "#339933",
+      description: "Server architecture & API development",
       skills: [
-        {
-          name: "MongoDB",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-          level: 70,
-        },
-        {
-          name: "MySQL",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-          level: 85,
-        },
-        {
-          name: "Git",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-          level: 80,
-        },
-        {
-          name: "GitHub",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-          level: 85,
-        },
-        {
-          name: "VS Code",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-          level: 90,
-        },
-      ],
+        { name: "Node.js", icon: <SiNodedotjs style={{ color: "#339933" }} /> },
+        { name: "Express.js", icon: <SiExpress style={{ color: "#ffffff" }} /> },
+        { name: "REST APIs", icon: <FaNetworkWired style={{ color: "#00d4ff" }} /> }
+      ]
     },
+    {
+      id: "mobile",
+      title: "Mobile",
+      icon: <FaMobileAlt />,
+      color: "#9333ea",
+      description: "Cross-platform mobile apps",
+      skills: [
+        { name: "React Native", icon: <SiReact style={{ color: "#61DAFB" }} /> },
+        { name: "Expo", icon: <SiExpo style={{ color: "#ffffff" }} /> }
+      ]
+    },
+    {
+      id: "databases",
+      title: "Databases",
+      icon: <FaDatabase />,
+      color: "#47A248",
+      description: "Relational & NoSQL data stores",
+      skills: [
+        { name: "MongoDB", icon: <SiMongodb style={{ color: "#47A248" }} /> },
+        { name: "MySQL", icon: <SiMysql style={{ color: "#4479A1" }} /> },
+        { name: "SQLite", icon: <SiSqlite style={{ color: "#003B57" }} /> }
+      ]
+    },
+    {
+      id: "uiux",
+      title: "UI/UX",
+      icon: <FaPaintBrush />,
+      color: "#F24E1E",
+      description: "Design systems & prototyping",
+      skills: [
+        { name: "Figma", icon: <SiFigma style={{ color: "#F24E1E" }} /> },
+        { name: "Canva", icon: <SiCanva style={{ color: "#00C4CC" }} /> },
+        { name: "Responsive Design", icon: <FaMobile style={{ color: "#00d4ff" }} /> }
+      ]
+    },
+    {
+      id: "tools",
+      title: "Tools",
+      icon: <FaTools />,
+      color: "#F05032",
+      description: "Development & collaboration tooling",
+      skills: [
+        { name: "Git", icon: <SiGit style={{ color: "#F05032" }} /> },
+        { name: "GitHub", icon: <SiGithub style={{ color: "#ffffff" }} /> },
+        // { name: "Postman", icon: <SiPostman style={{ color: "#FF6C37" }} /> },
+        { name: "VS Code", icon: <VscCode style={{ color: "#007ACC" }} /> },
+        { name: "Android Studio", icon: <SiAndroidstudio style={{ color: "#3DDC84" }} /> },
+        { name: "IntelliJ IDEA", icon: <SiIntellijidea style={{ color: "#FE315D" }} /> }
+      ]
+    },
+    {
+      id: "other",
+      title: "Other",
+      icon: <FaLayerGroup />,
+      color: "#FFCA28",
+      description: "Authentication, cloud & real-time protocols",
+      skills: [
+        { name: "Firebase", icon: <SiFirebase style={{ color: "#FFCA28" }} /> },
+        // { name: "JWT", icon: <SiJsonwebtokens style={{ color: "#D63AFF" }} /> },
+        { name: "WebRTC", icon: <SiWebrtc style={{ color: "#00d4ff" }} /> },
+        { name: "GitHub Actions", icon: <SiGithubactions style={{ color: "#2088FF" }} /> }
+      ]
+    }
   ];
+
+  const totalSkillsCount = skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0);
+
+  const filteredCategories = activeFilter === "All"
+    ? skillCategories
+    : skillCategories.filter(cat => cat.title === activeFilter);
 
   return (
     <section id="skills" className="skills">
+      {/* Ambient glowing background shapes */}
       <div className="skills-background">
         <div className="floating-shapes shape-1"></div>
         <div className="floating-shapes shape-2"></div>
         <div className="floating-shapes shape-3"></div>
       </div>
-      <div className="container">
-        <h2 className="section-title">My Skills</h2>
-        {/* <p className="section-subtitle">
-          Technologies I work with to bring ideas to life
-        </p> */}
 
-        <div className="skills-container">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="skill-category"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+      <div className="container">
+        {/* Section Header */}
+        <div className="skills-header-wrapper">
+          <h2 className="section-title">My Skills</h2>
+          <p className="skills-subtitle">
+            A comprehensive tech stack honed through full-stack development, mobile applications, cloud integrations, and competitive hackathons.
+          </p>
+        </div>
+
+        {/* Category Filter Tabs */}
+        <div className="skills-filter-pills">
+          <button 
+            className={`skill-filter-btn ${activeFilter === "All" ? "active" : ""}`}
+            onClick={() => setActiveFilter("All")}
+          >
+            All Tech <span className="filter-count">{totalSkillsCount}</span>
+          </button>
+          {skillCategories.map((category) => (
+            <button
+              key={category.id}
+              className={`skill-filter-btn ${activeFilter === category.title ? "active" : ""}`}
+              onClick={() => setActiveFilter(category.title)}
             >
-              <h3 className="category-title">
-                <span className="title-icon"></span>
-                {category.title}
-              </h3>
-              <div className="skills-grid">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="skill-item"
-                    data-aos="zoom-in"
-                    data-aos-delay={skillIndex * 50}
-                  >
-                    <div className="skill-header">
-                      <div className="skill-icon">
-                        <img
-                          src={skill.icon}
-                          alt={skill.name}
-                          className="icon-img"
-                        />
-                      </div>
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-progress">
-                      <div
-                        className="skill-progress-bar"
-                        style={{ width: `${skill.level}%` }}
-                      >
-                        <div className="progress-indicator"></div>
-                      </div>
-                    </div>
+              {category.title}
+              <span className="filter-count">{category.skills.length}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Skills Cards Grid */}
+        <div className="skills-modern-grid">
+          {filteredCategories.map((category) => (
+            <div key={category.id} className="skill-category-card">
+              <div 
+                className="category-card-top-accent" 
+                style={{ background: `linear-gradient(90deg, transparent, ${category.color}, transparent)` }}
+              ></div>
+
+              {/* Category Header */}
+              <div className="category-card-header">
+                <div 
+                  className="category-icon-wrapper"
+                  style={{ 
+                    borderColor: `${category.color}40`,
+                    boxShadow: `0 0 15px ${category.color}25`
+                  }}
+                >
+                  <span className="category-header-icon" style={{ color: category.color }}>
+                    {category.icon}
+                  </span>
+                </div>
+                <div className="category-title-block">
+                  <h3 className="category-card-title">{category.title}</h3>
+                  <span className="category-card-desc">{category.description}</span>
+                </div>
+                {/* <span className="category-badge-count">
+                  {category.skills.length} items
+                </span> */}
+              </div>
+
+              {/* Skills Tags Grid */}
+              <div className="skills-chips-wrapper">
+                {category.skills.map((skill, skillIdx) => (
+                  <div key={skillIdx} className="skill-badge-chip">
+                    <span className="skill-chip-icon">{skill.icon}</span>
+                    <span className="skill-chip-name">{skill.name}</span>
                   </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
-
-        {/* Additional Skills Section 
-        <div className="additional-skills">
-          <h3 className="additional-title">Also Familiar With</h3>
-          <div className="skills-tags">
-            {[
-              "figma",
-              "jQuery",
-              "Sass",
-              "Responsive Design",
-              "UI/UX Principles",
-              "Problem Solving",
-              "Agile Methodology",
-            ].map((skill, index) => (
-              <span key={index} className="skill-tag">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   );
