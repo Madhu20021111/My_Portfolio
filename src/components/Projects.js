@@ -1,11 +1,9 @@
 // components/Projects.js
-import React, { useState } from "react";
+import React from "react";
 import { 
   FaGithub, 
   FaExternalLinkAlt, 
-  FaCode, 
-  FaSearch,
-  FaTimes
+  FaCode 
 } from "react-icons/fa";
 import {
   SiReact,
@@ -25,9 +23,6 @@ import project03 from "../images/Project03.png";
 import project04 from "../images/Project04.png";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
-
   const projects = [
     {
       id: 1,
@@ -107,17 +102,6 @@ const Projects = () => {
     },
   ];
 
-  const categories = ["All", "Full Stack", "Frontend"];
-
-  const filteredProjects = projects.filter((project) => {
-    const matchesCategory = activeFilter === "All" || project.category === activeFilter;
-    const matchesSearch = 
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.technologies.some(tech => tech.name.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
   return (
     <section id="projects" className="projects">
       {/* Ambient background glows */}
@@ -133,129 +117,83 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Filter Pills */}
-        <div className="projects-filter-bar">
-          <div className="projects-category-pills">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`proj-filter-btn ${activeFilter === cat ? "active" : ""}`}
-                onClick={() => setActiveFilter(cat)}
-              >
-                {cat === "All" ? "All Projects" : cat}
-                <span className="proj-pill-count">
-                  {cat === "All" ? projects.length : projects.filter(p => p.category === cat).length}
-                </span>
-              </button>
-            ))}
-          </div>
-
-          <div className="projects-search-box">
-            <FaSearch className="proj-search-icon" />
-            <input 
-              type="text" 
-              placeholder="Search tech or project..." 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Search projects"
-            />
-            {searchQuery && (
-              <button className="proj-clear-btn" onClick={() => setSearchQuery("")}>
-                <FaTimes />
-              </button>
-            )}
-          </div>
-        </div>
-
         {/* Projects Grid */}
-        {filteredProjects.length > 0 ? (
-          <div className="projects-cards-grid">
-            {filteredProjects.map((project) => (
-              <div key={project.id} className="project-cyber-card">
-                {/* Glowing Top Accent Line */}
-                <div className="project-card-top-glow"></div>
+        <div className="projects-cards-grid">
+          {projects.map((project) => (
+            <div key={project.id} className="project-cyber-card">
+              {/* Glowing Top Accent Line */}
+              <div className="project-card-top-glow"></div>
 
-                {/* Project Image Container */}
-                <div className="project-image-wrapper">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-main-image"
-                    loading="lazy"
-                  />
-                  <div className="project-image-gradient"></div>
+              {/* Project Image Container */}
+              <div className="project-image-wrapper">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-main-image"
+                  loading="lazy"
+                />
+                <div className="project-image-gradient"></div>
 
-                  {/* Badge */}
-                  <div className="project-tag-pill">
-                    <span className="project-badge-text">{project.badge}</span>
-                  </div>
-
-                  {/* Hover Overlay Buttons */}
-                  <div className="project-hover-overlay">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-action-btn github-btn"
-                      title="View GitHub Repository"
-                    >
-                      <FaGithub className="btn-icon" />
-                      <span>Source Code</span>
-                    </a>
-                  </div>
+                {/* Badge */}
+                <div className="project-tag-pill">
+                  <span className="project-badge-text">{project.badge}</span>
                 </div>
 
-                {/* Project Body */}
-                <div className="project-card-content">
-                  <div className="project-title-row">
-                    <h3 className="project-name">{project.title}</h3>
-                    <span className="project-category-tag">{project.category}</span>
-                  </div>
-                  <span className="project-sub-headline">{project.subtitle}</span>
-
-                  <p className="project-description-text">{project.description}</p>
-
-                  {/* Tech Stack Chips */}
-                  <div className="project-tech-stack">
-                    <span className="tech-stack-label">Technologies:</span>
-                    <div className="tech-chips-group">
-                      {project.technologies.map((tech, i) => (
-                        <div key={i} className="project-tech-chip" title={tech.name}>
-                          <span className="tech-chip-icon">{tech.icon}</span>
-                          <span className="tech-chip-label">{tech.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Card Footer Link */}
-                  <div className="project-card-footer">
-                    <a
-                      href={project.github}
-                      className="project-primary-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaCode className="link-icon" />
-                      <span>Explore Repository</span>
-                      <FaExternalLinkAlt className="external-arrow-icon" />
-                    </a>
-                  </div>
+                {/* Hover Overlay Buttons */}
+                <div className="project-hover-overlay">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-action-btn github-btn"
+                    title="View GitHub Repository"
+                  >
+                    <FaGithub className="btn-icon" />
+                    <span>Source Code</span>
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="no-projects-found">
-            <p>No projects match your filter "{searchQuery}".</p>
-            <button 
-              className="proj-reset-btn"
-              onClick={() => { setSearchQuery(""); setActiveFilter("All"); }}
-            >
-              Reset Filters
-            </button>
-          </div>
-        )}
+
+              {/* Project Body */}
+              <div className="project-card-content">
+                <div className="project-title-row">
+                  <h3 className="project-name">{project.title}</h3>
+                  <span className="project-category-tag">{project.category}</span>
+                </div>
+                <span className="project-sub-headline">{project.subtitle}</span>
+
+                <p className="project-description-text">{project.description}</p>
+
+                {/* Tech Stack Chips */}
+                <div className="project-tech-stack">
+                  <span className="tech-stack-label">Technologies:</span>
+                  <div className="tech-chips-group">
+                    {project.technologies.map((tech, i) => (
+                      <div key={i} className="project-tech-chip" title={tech.name}>
+                        <span className="tech-chip-icon">{tech.icon}</span>
+                        <span className="tech-chip-label">{tech.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Card Footer Link */}
+                <div className="project-card-footer">
+                  <a
+                    href={project.github}
+                    className="project-primary-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaCode className="link-icon" />
+                    <span>Explore Repository</span>
+                    <FaExternalLinkAlt className="external-arrow-icon" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
