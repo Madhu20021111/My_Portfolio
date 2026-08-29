@@ -18,7 +18,6 @@ import {
   SiTypescript,
   SiPython,
   SiC,
-  SiCplusplus,
   SiReact,
   SiNextdotjs,
   SiHtml5,
@@ -34,11 +33,9 @@ import {
   SiCanva,
   SiGit,
   SiGithub,
-  SiPostman,
   SiAndroidstudio,
   SiIntellijidea,
   SiFirebase,
-  SiJsonwebtokens,
   SiWebrtc,
   SiGithubactions
 } from "react-icons/si";
