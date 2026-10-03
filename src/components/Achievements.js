@@ -154,13 +154,13 @@ const Achievements = () => {
   ];
 
   const otherAchievements = [
-    {
-      title: "PearlHack 3.0 - Top 5 Finalist",
-      org: "Hackathon Achievement",
-      tag: "Finalist",
-      desc: "Ranked among the top 5 teams for designing an innovative AR/VR mobile solution aimed at improving the lifestyle of urban women.",
-      icon: <FaTrophy />
-    },
+    // {
+    //   title: "PearlHack 3.0 - Top 5 Finalist",
+    //   org: "Hackathon Achievement",
+    //   tag: "Finalist",
+    //   desc: "Ranked among the top 5 teams for designing an innovative AR/VR mobile solution aimed at improving the lifestyle of urban women.",
+    //   icon: <FaTrophy />
+    // },
     {
       title: "Vice Secretary",
       org: "Buddhist Association - SUSL",
@@ -174,7 +174,42 @@ const Achievements = () => {
       tag: "Editorial Lead",
       desc: "Awarded a Certificate of Appreciation for leading the content team and managing technical writing for the 2025/2026 term.",
       icon: <FaAward />
-    }
+    },
+    {
+      title: "Project Chair",
+      org: "NotebookLM Project - SUSL Rotaract",
+      tag: "Project Management",
+      desc: "Led the project team by coordinating tasks, managing timelines, and ensuring effective collaboration throughout the project.",
+      icon: <FaUsers />
+    },
+    {
+      title: "Program Team Lead",
+      org: "Inter-University AI Blogathon - IEEE CS Chapter SUSL",
+      tag: "Leadership",
+      desc: "Led the program team in planning and coordinating an inter-university blog competition focused on artificial intelligence.",
+      icon: <FaUsers />
+    },
+        {
+      title: "Program Team Member",
+      org: "Next Gen 1.0 - IEEE CS Chapter SUSL",
+      tag: "Program Team",
+      desc: "Contributed to program planning, coordination, and execution while collaborating with the organizing team.",
+      icon: <FaUsers />
+    },
+    {
+      title: "Organizing Committee Member",
+      org: "PearlHack 4.0 - IEEE WIE SUSL",
+      tag: "Event Management",
+      desc: "Contributed to the organizing committee by supporting event planning, coordination, and successful execution of the hackathon.",
+      icon: <FaUsers />
+    },
+        {
+      title: "University Ambassador",
+      org: "AI International Conference",
+      tag: "Ambassadorship",
+      desc: "Represented the university by promoting the AI International Conference and supporting student engagement and participation.",
+      icon: <FaUsers />
+    },
   ];
 
   const [selectedCertIndex, setSelectedCertIndex] = useState(null);
@@ -223,37 +258,10 @@ const Achievements = () => {
       <div className="container">
         {/* Section Header */}
         <div className="achievements-header-wrapper">
-          {/* <div className="achievements-badge"> */}
-            {/* <FaShieldAlt className="badge-icon" /> */}
-            {/* <span>Credentials & Accreditations</span> */}
-          {/* </div> */}
           <h2 className="section-title">Certifications & Milestones</h2>
           <p className="achievements-subtitle">
             Continuous learning journey validating expertise in DevOps, Cloud, AI Protocols, and Competitive Problem Solving.
           </p>
-
-          {/* Quick Stats Ribbon */}
-          <div className="cert-stats-ribbon">
-            <div className="cert-stat-item">
-              <span className="stat-number">{certifications.length}+</span>
-              <span className="stat-label">Verified Certifications</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="cert-stat-item">
-              <span className="stat-number">4+</span>
-              <span className="stat-label">Hackathons & Contests</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="cert-stat-item">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">Leadership Roles</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="cert-stat-item">
-              <span className="stat-number">100%</span>
-              <span className="stat-label">Continuous Growth</span>
-            </div>
-          </div>
         </div>
 
         {/* Continuous Stream Flow Marquee */}
@@ -360,13 +368,9 @@ const Achievements = () => {
 
         {/* Section 2: Leadership & Experiences */}
         <div className="leadership-section-divider">
-          {/* <div className="achievements-badge"> */}
-            {/* <FaAward className="badge-icon" /> */}
-            {/* <span>Impact & Governance</span> */}
-          {/* </div> */}
-          <h2 className="section-title">Leadership & Experiences</h2>
+          <h2 className="section-title">Extracurricular Activities</h2>
           <p className="achievements-subtitle">
-            Demonstrated team management, organizational leadership, and editorial contribution.
+            Active involvement in university clubs, events, and activities, developing teamwork, leadership, and communication skills.
           </p>
         </div>
 

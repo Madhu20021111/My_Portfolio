@@ -169,16 +169,16 @@ const Skills = () => {
         <div className="skills-modern-grid">
           {skillCategories.map((category) => (
             <div key={category.id} className="skill-category-card">
-              <div 
-                className="category-card-top-accent" 
+              <div
+                className="category-card-top-accent"
                 style={{ background: `linear-gradient(90deg, transparent, ${category.color}, transparent)` }}
               ></div>
 
               {/* Category Header */}
               <div className="category-card-header">
-                <div 
+                <div
                   className="category-icon-wrapper"
-                  style={{ 
+                  style={{
                     borderColor: `${category.color}40`,
                     boxShadow: `0 0 15px ${category.color}25`
                   }}
