@@ -1,6 +1,7 @@
 // App.js (main component)
 import React from 'react';
 import './App.css';
+import ConstellationBackground from './components/ConstellationBackground';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -14,6 +15,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
+      <ConstellationBackground />
       <Header />
       <Hero />
       <About />

@@ -1,0 +1,42 @@
+/* ConstellationBackground.css */
+.constellation-bg-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  /* Deep clean dark backdrop with faint ambient cyber gradients */
+  background: 
+    radial-gradient(circle at 18% 25%, rgba(0, 212, 255, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 82% 75%, rgba(168, 85, 247, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.02) 0%, transparent 60%),
+    #050811;
+}
+
+.constellation-bg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  opacity: 0.92;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .constellation-bg-wrap {
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.04) 0%, transparent 50%),
+      #050811;
+  }
+
+  .constellation-bg-canvas {
+    opacity: 0.85;
+  }
+}

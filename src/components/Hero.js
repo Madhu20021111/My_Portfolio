@@ -2,12 +2,10 @@ import React from 'react';
 import './Hero.css';
 import heroImage from '../images/me.png'; 
 import { FaDownload, FaEnvelope } from 'react-icons/fa';
-import SphereBackground from './SphereBackground';
 
 const Hero = () => {
   return (
     <section className="hero">
-      <SphereBackground />
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">

@@ -1,7 +1,7 @@
 /* Hero.css */
 .hero {
   padding: 120px 0 80px;
-  background: #000000;
+  background: transparent;
   color: #ffffff;
   position: relative;
   overflow: hidden;
