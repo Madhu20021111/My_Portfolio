@@ -83,10 +83,14 @@
   transform: translate(-50%, -50%) scale(1.5);
 }
 
-/* Disable completely on touch devices */
-@media (hover: none) and (pointer: coarse) {
+/* Disable completely on mobile devices and touch devices */
+@media (max-width: 992px), (hover: none), (pointer: coarse) {
   .custom-cursor-dot,
   .custom-cursor-follower {
     display: none !important;
+  }
+  body, 
+  body * {
+    cursor: auto !important;
   }
 }

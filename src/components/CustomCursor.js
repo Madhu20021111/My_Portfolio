@@ -32,7 +32,6 @@ const CustomCursor = () => {
     let cursorY = -100;
     const followSpeed = 0.16;
     let isVisible = false;
-    let isClicked = false;
     let isHovered = false;
     let animationFrameId;
 
@@ -72,13 +71,11 @@ const CustomCursor = () => {
     };
 
     const handleMouseDown = () => {
-      isClicked = true;
       if (dotRef.current) dotRef.current.classList.add('clicked');
       if (followerRef.current) followerRef.current.classList.add('clicked');
     };
 
     const handleMouseUp = () => {
-      isClicked = false;
       if (dotRef.current) dotRef.current.classList.remove('clicked');
       if (followerRef.current) followerRef.current.classList.remove('clicked');
     };

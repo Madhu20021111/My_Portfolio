@@ -83,18 +83,17 @@
   max-width: 600px;
 }
 
-.hero-me{
+.hero-me {
   font-size: 1.5rem;
   font-weight: 600;
-  color:#ffffff;
+  color: #ffffff;
   display: flex;
-  flex-wrap: nowrap; 
+  flex-wrap: wrap; 
   align-items: center;
   gap: 8px;
   margin-bottom: 15px;
-  white-space: nowrap;
-  
 }
+
 .typing-text {
   color: #00d4ff;
   position: relative;
@@ -104,14 +103,16 @@
   white-space: nowrap; 
   border-right: 3px solid #00d4ff; 
   width: 0;
+  max-width: 100%;
   animation: 
     typing 3.5s steps(30, end) forwards,
     blink-caret 0.75s step-end infinite;
 }
 
 .hero-text {
-  max-width: 800px;
+  max-width: 650px;
 }
+
 @keyframes typing {
   from { width: 0 }
   to { width: 25ch; }
@@ -121,17 +122,6 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #00d4ff; }
-}
-
-@media (max-width: 768px) {
-  .hero-me {
-    font-size: 1.1rem;
-    flex-direction: column; 
-    text-align: center;
-  }
-  .typing-text {
-    font-size: 1.3rem;
-  }
 }
 
 .hero-text h1  {
@@ -422,107 +412,152 @@
 
 /* Responsive Design */
 @media (max-width: 992px) {
+  .hero {
+    padding: 110px 0 60px;
+    min-height: auto;
+  }
+
   .hero-content {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 60px;
+    gap: 45px;
+    align-items: center;
   }
 
-
-  .hero-text p .hero-me{
-    font-size: 1.8rem;
-  }
-  
   .hero-text {
     max-width: 100%;
   }
-  
+
+  .hero-me {
+    justify-content: center;
+    font-size: 1.35rem;
+  }
+
   .hero-buttons {
     justify-content: center;
   }
-  
+
+  .image-container {
+    max-width: 100%;
+  }
+
   .profile-image {
-    width: 320px;
-    height: 320px;
+    width: clamp(250px, 45vw, 320px);
+    height: clamp(250px, 45vw, 320px);
   }
 }
 
-
-
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 0 60px;
+    padding: 95px 0 50px;
   }
   
   .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 6.5vw, 2.7rem);
+    margin-bottom: 16px;
+  }
+
+  .hero-me {
+    font-size: 1.15rem;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .typing-text {
+    font-size: clamp(1.1rem, 4.5vw, 1.35rem);
+    white-space: normal;
+    border-right: none;
+    width: auto;
+    animation: none;
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+    display: inline;
   }
   
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
   
   .hero-institution {
-    font-size: 1.1rem;
-  }
-  .hero-text p {
-    font-size: 2.4rem;
-    color: #ffa8ff;
+    font-size: 1rem;
+    margin-bottom: 24px;
   }
   
   .profile-image {
-    width: 280px;
-    height: 280px;
+    width: clamp(220px, 55vw, 270px);
+    height: clamp(220px, 55vw, 270px);
   }
   
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin-top: 24px;
   }
   
   .hero-buttons .btn {
     width: 100%;
-    max-width: 250px;
+    max-width: 270px;
     justify-content: center;
+    padding: 13px 24px;
+  }
+
+  .btn-content {
+    margin-left: 0;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
+  .hero {
+    padding: 85px 0 40px;
+  }
+
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: clamp(1.7rem, 7.5vw, 2.15rem);
   }
   
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.98rem;
   }
   
   .hero-institution {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
+
   .hero-me {
-    font-size: 10rem;
-    /* margin-bottom: 10px;
-    color: #ffa8ff;
-    font-weight: 500; */
+    font-size: 0.98rem;
+  }
+
+  .typing-text {
+    font-size: 1.05rem;
   }
   
   .profile-image {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-border {
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
   }
   
   .floating-shapes.shape-1 {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .floating-shapes.shape-2 {
     width: 80px;
     height: 80px;
   }
   
+  .floating-shapes.shape-2 {
+    width: 50px;
+    height: 50px;
+  }
+  
   .floating-shapes.shape-3 {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 }

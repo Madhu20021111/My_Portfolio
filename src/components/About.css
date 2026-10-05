@@ -59,17 +59,19 @@
 }
 
 .about-text {
-  flex: 1;
-  padding-left: 60px;
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .about-text p {
-  color: #ffffff;
+  color: #e2e8f0;
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   line-height: 1.8;
   position: relative;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 .about-text p::before {
@@ -77,6 +79,7 @@
   position: absolute;
   left: 0;
   color: #00d4ff;
+  font-size: 1.15rem;
 }
 
 @keyframes float {
@@ -103,81 +106,38 @@
   }
 }
 
-.floating-element {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 107, 107, 0.6);
-  z-index: 1;
-}
-
-.floating-element.element-1 {
-  width: 30px;
-  height: 30px;
-  top: -15px;
-  right: 30px;
-  animation: float-element 7s ease-in-out infinite;
-}
-
-.floating-element.element-2 {
-  width: 20px;
-  height: 20px;
-  bottom: 40px;
-  left: -10px;
-  animation: float-element 9s ease-in-out infinite 1s;
-}
-
-.floating-element.element-3 {
-  width: 15px;
-  height: 15px;
-  top: 70px;
-  right: -5px;
-  animation: float-element 11s ease-in-out infinite 0.5s;
-}
-
-@keyframes float-element {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  33% {
-    transform: translateY(-20px) translateX(10px);
-  }
-  66% {
-    transform: translateY(10px) translateX(-15px);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-}
-
 @media (max-width: 768px) {
+  .about {
+    padding: 50px 0;
+  }
+
   .about-content {
     flex-direction: column;
     align-items: center;
   }
   
   .about-text {
-    padding-left: 0;
-    margin-top: 40px;
-  }
-  
-  .image-placeholder {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .container h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .image-placeholder {
-    width: 200px;
-    height: 200px;
-    font-size: 1rem;
+    padding: 0;
+    margin-top: 0;
   }
   
   .about-text p {
-    font-size: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about-text p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    padding-left: 18px;
+    margin-bottom: 14px;
   }
 }

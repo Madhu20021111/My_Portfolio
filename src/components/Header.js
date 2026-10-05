@@ -10,6 +10,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -19,26 +23,31 @@ const Header = () => {
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul>
             <li>
-              <a href="#about"><FaUser className="nav-icon" /> About</a>
+              <a href="#about" onClick={closeMenu}><FaUser className="nav-icon" /> About</a>
             </li>
             <li>
-              <a href="#education"><FaGraduationCap className="nav-icon" /> Education</a>
+              <a href="#education" onClick={closeMenu}><FaGraduationCap className="nav-icon" /> Education</a>
             </li>
             <li>
-              <a href="#skills"><FaCode className="nav-icon" /> Skills</a>
+              <a href="#skills" onClick={closeMenu}><FaCode className="nav-icon" /> Skills</a>
             </li>
             <li>
-            <a href="#achievements"><FaTrophy className="nav-icon" /> Achievements</a>
+              <a href="#achievements" onClick={closeMenu}><FaTrophy className="nav-icon" /> Achievements</a>
             </li>
             <li>
-              <a href="#projects"><FaProjectDiagram className="nav-icon" /> Projects</a>
+              <a href="#projects" onClick={closeMenu}><FaProjectDiagram className="nav-icon" /> Projects</a>
             </li>
             <li>
-              <a href="#contact"><FaEnvelope className="nav-icon" /> Contact</a>
+              <a href="#contact" onClick={closeMenu}><FaEnvelope className="nav-icon" /> Contact</a>
             </li>
           </ul>
         </nav>
-        <button className="menu-toggle" onClick={toggleMenu}>
+        <button 
+          className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+        >
           <span></span>
           <span></span>
           <span></span>
