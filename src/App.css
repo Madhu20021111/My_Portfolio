@@ -6,11 +6,15 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   line-height: 1.6;
   color: #ffffff;
   background-color: #050811;
   overflow-x: hidden;
+}
+
+button, input, textarea, select {
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .App {

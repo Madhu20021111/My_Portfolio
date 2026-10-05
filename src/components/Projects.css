@@ -1,5 +1,5 @@
 /* Projects.css - Modern Cyber-Glass Aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 .projects {
   background: transparent;
@@ -7,7 +7,7 @@
   padding: 60px 0 65px;
   position: relative;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Ambient Radial Background Glows */
@@ -237,7 +237,7 @@
   font-size: 1.35rem;
   font-weight: 700;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: -0.3px;
 }
 

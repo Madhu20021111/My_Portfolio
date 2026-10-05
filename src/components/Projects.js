@@ -12,6 +12,13 @@ import {
   SiMongodb,
   SiHtml5,
   SiCss3,
+  SiFirebase,
+  SiWebrtc,
+  SiGoogle,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiSqlite,
   SiJavascript
 } from "react-icons/si";
 import "./Projects.css";
@@ -21,11 +28,71 @@ import project01 from "../images/Project01.png";
 import project02 from "../images/Project02.jpg";
 import project03 from "../images/Project03.png";
 import project04 from "../images/Project04.png";
+import project05 from "../images/Project05.png";
+import project06 from "../images/Project06.png";
+import Project07 from "../images/Project07.png";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "CraftConnect",
+      subtitle: "Digital Marketplace for Sri Lankan Handicrafts",
+      category: "Full Stack",
+      badge: "E-Commerce",
+      featured: true,
+      description:
+        "A digital marketplace designed to connect Sri Lankan artisans with customers through an online platform for showcasing and selling traditional handmade crafts.",
+      technologies: [
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "React", icon: <SiReact style={{ color: "#61DAFB" }} /> },
+        { name: "TypeScript", icon: <SiTypescript style={{ color: "#3178C6" }} /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss style={{ color: "#06B6D4" }} /> },
+        { name: "Node.js", icon: <SiNodedotjs style={{ color: "#339933" }} /> },
+        { name: "Express.js", icon: <SiExpress /> },
+        { name: "SQLite", icon: <SiSqlite /> }
+      ],
+      github: "https://github.com/Madhu20021111/CraftConnect",
+      image: project06,
+    },
+        {
+      id: 2,
+      title: "MindCare.lk",
+      subtitle: "Digital Mental Health & Counseling Platform",
+      category: "Mobile",
+      badge: "AI & Healthcare",
+      featured: true,
+      description:
+        "A digital mental health and counseling platform designed to connect users with counselors through an accessible mobile experience, featuring AI-powered assistance and real-time communication.",
+      technologies: [
+        { name: "React Native", icon: <SiReact style={{ color: "#61DAFB" }} /> },
+        { name: "Firebase", icon: <SiFirebase style={{ color: "#FFCA28" }} /> },
+        { name: "WebRTC", icon: <SiWebrtc /> },
+        { name: "Gemini API", icon: <SiGoogle style={{ color: "#4285F4" }} /> }
+      ],
+      github: "https://github.com/Madhu20021111/MindCare.lk",
+      image: project05,
+    },
+        {
+      id: 3,
+      title: "MediInfo.lk",
+      subtitle: "Multilingual Medicine Information Platform",
+      category: "Web",
+      badge: "Healthcare",
+      featured: false,
+      description:
+        "A multilingual medicine information platform designed to help users find medicine-related information through an accessible web interface with support for Sinhala, Tamil, and English.",
+      technologies: [
+        { name: "React", icon: <SiReact style={{ color: "#61DAFB" }} /> },
+        { name: "JavaScript", icon: <SiJavascript style={{ color: "#F7DF1E" }} /> },
+        { name: "HTML5", icon: <SiHtml5 style={{ color: "#E34F26" }} /> },
+        { name: "CSS3", icon: <SiCss3 style={{ color: "#1572B6" }} /> }
+      ],
+      github: "https://github.com/gavirubihan/MediInfo.lk",
+      image: Project07,
+    },
+    {
+      id: 4,
       title: "SmartToDo",
       subtitle: "Full-Stack Task & Productivity Hub",
       category: "Full Stack",
@@ -45,7 +112,7 @@ const Projects = () => {
       image: project04,
     },
     {
-      id: 2,
+      id: 5,
       title: "Job Tracker",
       subtitle: "Career Application & Interview Portal",
       category: "Frontend",
@@ -62,7 +129,7 @@ const Projects = () => {
       image: project03,
     },
     {
-      id: 3,
+      id: 6,
       title: "DineIn Restaurant Portal",
       subtitle: "Culinary Experience & Food Ordering System",
       category: "Full Stack",
@@ -84,7 +151,7 @@ const Projects = () => {
       image: project02,
     },
     {
-      id: 4,
+      id: 7,
       title: "Happy Coffee",
       subtitle: "Artisan Coffee Experience & Storefront",
       category: "Frontend",
@@ -100,6 +167,7 @@ const Projects = () => {
       demo: "https://github.com/Madhu20021111/coffee-shop",
       image: project01,
     },
+    
   ];
 
   return (

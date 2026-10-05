@@ -1,5 +1,5 @@
 /* Skills.css - Modern Cyber-Glass Aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 .skills {
   background: transparent;
@@ -7,7 +7,7 @@
   padding: 60px 0 65px;
   position: relative;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .skills-background {
@@ -180,7 +180,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 2px 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: -0.2px;
 }
 
@@ -244,7 +244,7 @@
   color: #e2e8f0;
   font-size: 0.88rem;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   letter-spacing: 0.2px;
 }
 
